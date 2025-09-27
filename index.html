@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna Dominique Z. Sasil</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
         
         * {
             margin: 0;
@@ -51,32 +51,33 @@
         .container {
             max-width: 100%;
             height: calc(100vh - 16px);
-            padding: 60px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             position: relative;
             z-index: 2;
         }
         
-        /* Header */
+        /* New Header Style */
         .header {
-            text-align: center;
-            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
         }
         
-        .name {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            font-weight: 700;
+        .logo {
+            font-family: 'Jost', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
             color: #d2312f;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         
         .header-nav {
             display: flex;
-            justify-content: center;
             gap: 40px;
         }
         
@@ -84,18 +85,23 @@
             font-family: 'Jost', sans-serif;
             font-size: 16px;
             font-weight: 500;
-            color: #d2312f;
+            color: #8C7F80;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: opacity 0.3s ease;
+            transition: color 0.3s ease;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            border-radius: 20px;
         }
         
-        .nav-link:hover {
-            opacity: 0.7;
+        .nav-link:hover,
+        .nav-link.contact {
+            color: #d2312f;
+            border-color: #d2312f;
         }
         
-        /* Main Content Area */
+        /* Main Content Area - Enlarged Frames */
         .main-content {
             flex: 1;
             display: flex;
@@ -104,12 +110,12 @@
             position: relative;
         }
         
-        /* Work Display - 3 items */
+        /* Work Display - Larger Frames */
         .work-display {
             display: flex;
             gap: 40px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             justify-content: center;
             align-items: center;
             position: relative;
@@ -117,8 +123,8 @@
         
         .work-item {
             background: rgba(255, 255, 255, 0.9);
-            width: 280px;
-            height: 350px;
+            width: 350px;
+            height: 450px;
             position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             transition: transform 0.3s ease;
@@ -131,7 +137,7 @@
         
         .work-image {
             width: 100%;
-            height: 280px;
+            height: 350px;
             background: #f8f8f8;
             display: flex;
             align-items: center;
@@ -148,32 +154,32 @@
         
         .work-placeholder {
             font-family: 'Jost', sans-serif;
-            font-size: 12px;
+            font-size: 14px;
             color: #8C7F80;
             text-align: center;
             padding: 20px;
         }
         
         .work-info {
-            padding: 20px;
-            height: 70px;
+            padding: 25px;
+            height: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         
         .work-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 14px;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
             font-weight: 600;
             color: #d2312f;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             text-transform: lowercase;
         }
         
         .work-type {
             font-family: 'Jost', sans-serif;
-            font-size: 11px;
+            font-size: 12px;
             color: #8C7F80;
             font-weight: 400;
         }
@@ -254,11 +260,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Jost', sans-serif;
             font-size: 24px;
             font-weight: 600;
             color: #d2312f;
@@ -282,15 +288,86 @@
         
         .section-content {
             flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow-y: auto;
+            padding-right: 20px;
         }
         
-        /* Information Section */
+        /* Work Section with Scrollable Content */
+        .work-experience {
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 20px;
+        }
+        
+        .job-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(210, 49, 47, 0.2);
+        }
+        
+        .job-section:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title {
+            font-family: 'Jost', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #d2312f;
+            margin-bottom: 8px;
+        }
+        
+        .job-company {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: #8C7F80;
+            margin-bottom: 15px;
+        }
+        
+        .job-description {
+            font-family: 'Jost', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #8C7F80;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .achievements {
+            margin-top: 20px;
+        }
+        
+        .achievements h4 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #d2312f;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-item {
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #8C7F80;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .achievement-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #d2312f;
+        }
+        
+        /* About Section */
         .about-content {
-            max-width: 600px;
-            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .about-content p {
@@ -302,108 +379,57 @@
             margin-bottom: 24px;
         }
         
-        .job-title {
-            font-family: 'Playfair Display', serif;
+        .education, .languages {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(210, 49, 47, 0.2);
+        }
+        
+        .section-subtitle {
+            font-family: 'Jost', sans-serif;
             font-size: 18px;
             font-weight: 600;
             color: #d2312f;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .skill-item {
-            font-family: 'Jost', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            color: #8C7F80;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 10px 16px;
-            border: 1px solid rgba(210, 49, 47, 0.2);
-        }
-        
-        /* Contact Section - QSL Card Style */
+        /* Contact Section - Simplified */
         .contact-content {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 80px;
             max-width: 800px;
+            margin: 0 auto;
         }
         
         .contact-illustration {
             width: 300px;
             height: 400px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid #d2312f;
-            padding: 20px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            position: relative;
-        }
-        
-        .contact-illustration::before {
-            content: 'QSL CARD';
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: #d2312f;
-            color: white;
-            padding: 4px 12px;
-            font-family: 'Jost', sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            justify-content: center;
         }
         
         .illustration-placeholder {
             width: 100%;
-            height: 250px;
-            background: #f8f8f8;
-            border: 2px dashed #d2312f;
+            height: 100%;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
             color: #8C7F80;
             font-family: 'Jost', sans-serif;
-            font-size: 12px;
+            font-size: 14px;
             text-align: center;
-        }
-        
-        .contact-details {
-            font-family: 'Jost', sans-serif;
-            font-size: 11px;
-            color: #8C7F80;
-            text-align: center;
-            line-height: 1.4;
-        }
-        
-        .contact-details div {
-            margin-bottom: 8px;
-        }
-        
-        .contact-tagline {
-            background: #d2312f;
-            color: white;
-            padding: 8px 16px;
-            font-family: 'Jost', sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 20px;
-            text-align: center;
+            border: 2px dashed #d2312f;
+            opacity: 0.5;
         }
         
         .contact-info {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         
         .contact-item {
@@ -411,8 +437,6 @@
             font-size: 16px;
             font-weight: 400;
             color: #8C7F80;
-            margin-bottom: 20px;
-            display: block;
         }
         
         .contact-item a {
@@ -428,7 +452,7 @@
         .resume-btn {
             background: #d2312f;
             color: white !important;
-            padding: 12px 24px;
+            padding: 15px 30px;
             text-decoration: none;
             font-family: 'Jost', sans-serif;
             font-size: 14px;
@@ -437,40 +461,13 @@
             letter-spacing: 1px;
             transition: opacity 0.3s ease;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 20px;
+            border-radius: 0;
         }
         
         .resume-btn:hover {
             opacity: 0.8;
             color: white !important;
-        }
-        
-        /* Work Section */
-        .work-content {
-            max-width: 700px;
-            text-align: left;
-        }
-        
-        .work-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: #d2312f;
-            margin-bottom: 16px;
-            margin-top: 32px;
-        }
-        
-        .work-content h3:first-of-type {
-            margin-top: 0;
-        }
-        
-        .work-content p {
-            font-family: 'Jost', sans-serif;
-            font-size: 15px;
-            font-weight: 400;
-            color: #8C7F80;
-            line-height: 1.7;
-            margin-bottom: 12px;
         }
         
         /* Responsive */
@@ -480,12 +477,12 @@
             }
             
             .work-item {
-                width: 250px;
-                height: 320px;
+                width: 300px;
+                height: 400px;
             }
             
             .work-image {
-                height: 250px;
+                height: 300px;
             }
         }
         
@@ -504,6 +501,15 @@
                 gap: 40px;
                 text-align: center;
             }
+            
+            .header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header-nav {
+                gap: 20px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -513,21 +519,7 @@
             
             .container {
                 height: calc(100vh - 8px);
-                padding: 30px;
-            }
-            
-            .name {
-                font-size: 24px;
-                margin-bottom: 16px;
-            }
-            
-            .header-nav {
-                gap: 25px;
-                flex-wrap: wrap;
-            }
-            
-            .nav-link {
-                font-size: 14px;
+                padding: 20px;
             }
             
             .section {
@@ -535,30 +527,47 @@
                 padding: 30px;
             }
             
-            .section-title {
+            .logo {
                 font-size: 20px;
             }
             
-            .contact-illustration {
-                width: 250px;
-                height: 320px;
+            .nav-link {
+                font-size: 14px;
+                padding: 8px 15px;
             }
+        }
+        
+        /* Custom Scrollbar */
+        .section-content::-webkit-scrollbar,
+        .work-experience::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .section-content::-webkit-scrollbar-track,
+        .work-experience::-webkit-scrollbar-track {
+            background: rgba(210, 49, 47, 0.1);
+        }
+        
+        .section-content::-webkit-scrollbar-thumb,
+        .work-experience::-webkit-scrollbar-thumb {
+            background: #d2312f;
+            border-radius: 3px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
+        <!-- New Header Style -->
         <div class="header">
-            <h1 class="name">Anna Dominique Z. Sasil</h1>
+            <div class="logo">Anna Sasil</div>
             <nav class="header-nav">
                 <a href="#" class="nav-link" onclick="openSection('work')">Work</a>
-                <a href="#" class="nav-link" onclick="openSection('information')">Information</a>
-                <a href="#" class="nav-link" onclick="openSection('contact')">How to Reach Me</a>
+                <a href="#" class="nav-link" onclick="openSection('about')">About</a>
+                <a href="#" class="nav-link contact" onclick="openSection('contact')">Contact</a>
             </nav>
         </div>
 
-        <!-- Main Content - Work Display (3 items) -->
+        <!-- Main Content - Enlarged Work Display -->
         <div class="main-content">
             <div class="work-display">
                 <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
@@ -598,59 +607,89 @@
         </div>
     </div>
 
-    <!-- Work Section -->
+    <!-- Work Section with Professional Experience -->
     <div class="section" id="work-section">
         <div class="section-header">
             <h2 class="section-title">Work</h2>
             <button class="close-btn" onclick="closeSection()">&times;</button>
         </div>
         <div class="section-content">
-            <div class="work-content">
-                <h3>Clean Solutions USA</h3>
-                <p>Complete website redesign for power washing and holiday lighting service. Improved user flow, clearer service categorization, and mobile-responsive design resulting in enhanced professional brand presentation.</p>
-                
-                <h3>Rebel House Utah</h3>
-                <p>Boutique indoor cycling studio rebrand with modern, energetic design. Enhanced community messaging and streamlined class booking user experience for improved brand coherence and engagement.</p>
-                
-                <h3>PPC Optimization</h3>
-                <p>Daily optimization of 8+ landing pages for conversion rate improvement. Focus on SEO compliance, accessibility standards, and user experience best practices with 45-minute average turnaround time.</p>
-                
-                <h3>DOST Publications</h3>
-                <p>Established comprehensive visual identity system for Department of Science & Technology. Created infographics, technical reports, and publicity materials serving 50+ staff members across multiple research initiatives.</p>
-                
-                <h3>Personal Illustrations</h3>
-                <p>Postcard illustration series exploring "normcore + one splash of color" aesthetic. Hand-drawn works capturing movement and everyday moments with selective color application.</p>
+            <div class="work-experience">
+                <div class="job-section">
+                    <h3 class="job-title">Senior Quality Analyst</h3>
+                    <div class="job-company">Olly Olly, LLC | 2023 - Present</div>
+                    <p class="job-description">
+                        Lead digital experience and conversion optimization initiatives for landing pages and PPC campaigns. 
+                        Redesign underperforming pages ensuring adherence to client brand guidelines and conversion best practices. 
+                        Revise and optimize copy for 8+ landing pages daily, creating compelling, SEO-friendly content using AI-powered tools.
+                    </p>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <div class="achievement-item">Reduced average project turnaround from 90 to 45 minutes through streamlined QA processes</div>
+                        <div class="achievement-item">Maintain 100% client satisfaction rate through comprehensive testing protocols</div>
+                        <div class="achievement-item">Edit and enhance client/stock photography using advanced Photoshop techniques</div>
+                        <div class="achievement-item">Create custom HTML/CSS animations and graphics for enhanced user experience</div>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h3 class="job-title">Project Development Officer</h3>
+                    <div class="job-company">Department of Science & Technology | 2019 - 2023</div>
+                    <p class="job-description">
+                        Developed comprehensive graphic design system for government department lacking dedicated creative team. 
+                        Created infographics, video content, and publicity materials for multiple scientific research projects. 
+                        Managed technical and financial progress tracking for government initiatives, ensuring on-time delivery and budget compliance.
+                    </p>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <div class="achievement-item">Established visual identity and communication strategy improving project visibility</div>
+                        <div class="achievement-item">Developed creative operations system serving 50+ staff members</div>
+                        <div class="achievement-item">Coordinated with multiple government agencies and research institutions</div>
+                        <div class="achievement-item">Produced detailed accomplishment reports and progress documentation</div>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h3 class="job-title">Research Assistant</h3>
+                    <div class="job-company">Planetary Health Philippines | 2018 - 2019</div>
+                    <p class="job-description">
+                        Supported content strategy and research operations for health-focused startup. 
+                        Wrote blog posts, research proposals, and grant applications while managing logistics for multi-city research projects. 
+                        Created website graphics and promotional materials supporting research initiatives.
+                    </p>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <div class="achievement-item">Developed content strategy increasing stakeholder engagement</div>
+                        <div class="achievement-item">Managed complex project logistics across multiple cities</div>
+                        <div class="achievement-item">Supported successful business development meetings with funding agencies</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Information Section -->
-    <div class="section" id="information-section">
+    <!-- About Section -->
+    <div class="section" id="about-section">
         <div class="section-header">
-            <h2 class="section-title">Information</h2>
+            <h2 class="section-title">About</h2>
             <button class="close-btn" onclick="closeSection()">&times;</button>
         </div>
         <div class="section-content">
             <div class="about-content">
-                <div class="job-title">Creative Professional, UX/UI Analyst</div>
+                <p>Senior Creative Professional with 6+ years of experience in digital design, UX optimization, and project management. Specialized in conversion-focused web design, SEO-driven content strategy, and cross-functional creative problem-solving. Proven track record of improving site performance through data-driven design decisions and streamlined QA processes.</p>
                 
-                <p>6+ years experience bridging design and functionality. Background in public health taught systematic thinking about user needs, while design experience creates solutions that are both beautiful and effective.</p>
+                <p>Currently specializing in conversion-focused web design and UX optimization, combining analytical thinking with creative problem-solving to deliver measurable results. Personal practice explores minimalist aesthetics with strategic color application through illustration work.</p>
                 
-                <p>Currently at Olly Olly, LLC specializing in conversion-focused web design and UX optimization. Review and improve 8+ landing pages daily, combining analytical thinking with creative problem-solving to deliver measurable results.</p>
+                <div class="education">
+                    <h3 class="section-subtitle">Education</h3>
+                    <p>Bachelor of Science in Public Health<br>
+                    University of the Philippines - Manila | 2014 - 2018</p>
+                </div>
                 
-                <p>Personal practice explores minimalist aesthetics with strategic color application through postcard illustrations, maintaining focus on movement and authentic moment capture.</p>
-                
-                <div class="skills-list">
-                    <span class="skill-item">Adobe Photoshop</span>
-                    <span class="skill-item">Figma</span>
-                    <span class="skill-item">HTML/CSS</span>
-                    <span class="skill-item">WordPress</span>
-                    <span class="skill-item">UX/UI Analysis</span>
-                    <span class="skill-item">SEO Optimization</span>
-                    <span class="skill-item">Python Basics</span>
-                    <span class="skill-item">JIRA & Agile</span>
-                    <span class="skill-item">Google Analytics</span>
-                    <span class="skill-item">AI Tools Integration</span>
+                <div class="languages">
+                    <h3 class="section-subtitle">Languages</h3>
+                    <p><strong>Native:</strong> English, Filipino<br>
+                    <strong>Intermediate:</strong> French</p>
                 </div>
             </div>
         </div>
@@ -659,44 +698,39 @@
     <!-- Contact Section -->
     <div class="section" id="contact-section">
         <div class="section-header">
-            <h2 class="section-title">How to Reach Me</h2>
+            <h2 class="section-title">Contact</h2>
             <button class="close-btn" onclick="closeSection()">&times;</button>
         </div>
         <div class="section-content">
             <div class="contact-content">
                 <div class="contact-illustration">
                     <div class="illustration-placeholder">
-                        Your Illustration<br>Will Go Here<br>(PNG Upload)
+                        Your PNG Illustration<br>Will Go Here
                     </div>
-                    <div class="contact-details">
-                        <div>EMAIL: your.email@gmail.com</div>
-                        <div>PHONE: +63 XXX XXX XXXX</div>
-                        <div>LOCATION: Metro Manila, PH</div>
-                        <div>LINKEDIN: your-profile</div>
-                    </div>
-                    <div class="contact-tagline">I'll Get Back to You ASAP</div>
                 </div>
                 
                 <div class="contact-info">
                     <div class="contact-item">
-                        Available for freelance projects, consulting work, and full-time opportunities in web design, UX analysis, and creative strategy.
+                        <strong>Email:</strong> your.email@gmail.com
                     </div>
                     <div class="contact-item">
-                        <a href="mailto:your.email@gmail.com">Send me an email</a>
+                        <strong>Phone:</strong> +63 XXX XXX XXXX
                     </div>
                     <div class="contact-item">
-                        <a href="#" target="_blank">View LinkedIn profile</a>
+                        <strong>Location:</strong> Metro Manila, Philippines
                     </div>
                     <div class="contact-item">
-                        <a href="#" target="_blank" class="resume-btn">Download Resume PDF</a>
+                        <strong>LinkedIn:</strong> <a href="#" target="_blank">your-profile</a>
                     </div>
+                    
+                    <a href="#" target="_blank" class="resume-btn">Download Resume PDF</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Work display cycling (shows 3 at a time, cycles through different sets)
+        // Work display cycling
         const workProjects = [
             [
                 { title: 'clean solutions usa', type: 'website redesign', placeholder: 'Clean Solutions USA<br>Website Redesign<br>Before/After' },
