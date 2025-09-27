@@ -70,7 +70,7 @@
         .logo {
             font-family: 'Jost', sans-serif;
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 400;
             color: #d2312f;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -84,7 +84,7 @@
         .nav-link {
             font-family: 'Jost', sans-serif;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
             color: #8C7F80;
             text-decoration: none;
             text-transform: uppercase;
@@ -171,7 +171,7 @@
         .work-title {
             font-family: 'Jost', sans-serif;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 400;
             color: #d2312f;
             margin-bottom: 6px;
             text-transform: lowercase;
@@ -266,7 +266,7 @@
         .section-title {
             font-family: 'Jost', sans-serif;
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 400;
             color: #d2312f;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -312,7 +312,7 @@
         .job-title {
             font-family: 'Jost', sans-serif;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 400;
             color: #d2312f;
             margin-bottom: 8px;
         }
@@ -320,7 +320,7 @@
         .job-company {
             font-family: 'Jost', sans-serif;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
             color: #8C7F80;
             margin-bottom: 15px;
         }
@@ -366,11 +366,39 @@
         
         /* About Section */
         .about-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
         }
         
-        .about-content p {
+        .about-photo {
+            width: 250px;
+            height: 300px;
+            flex-shrink: 0;
+            background: #f8f8f8;
+            border: 2px dashed #d2312f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8C7F80;
+            font-size: 12px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
             font-family: 'Jost', sans-serif;
             font-size: 16px;
             font-weight: 400;
@@ -388,7 +416,7 @@
         .section-subtitle {
             font-family: 'Jost', sans-serif;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 400;
             color: #d2312f;
             margin-bottom: 15px;
         }
@@ -456,7 +484,7 @@
             text-decoration: none;
             font-family: 'Jost', sans-serif;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: opacity 0.3s ease;
@@ -675,23 +703,29 @@
             <button class="close-btn" onclick="closeSection()">&times;</button>
         </div>
         <div class="section-content">
-            <div class="about-content">
-                <p>Senior Creative Professional with 6+ years of experience in digital design, UX optimization, and project management. Specialized in conversion-focused web design, SEO-driven content strategy, and cross-functional creative problem-solving. Proven track record of improving site performance through data-driven design decisions and streamlined QA processes.</p>
-                
-                <p>Currently specializing in conversion-focused web design and UX optimization, combining analytical thinking with creative problem-solving to deliver measurable results. Personal practice explores minimalist aesthetics with strategic color application through illustration work.</p>
-                
-                <div class="education">
-                    <h3 class="section-subtitle">Education</h3>
-                    <p>Bachelor of Science in Public Health<br>
-                    University of the Philippines - Manila | 2014 - 2018</p>
+                <div class="about-content">
+                    <div class="about-photo">
+                        <!-- Replace with: <img src="your-photo.jpg" alt="Anna Sasil"> -->
+                        Your Photo<br>Goes Here<br>(JPG/PNG)
+                    </div>
+                    <div class="about-text">
+                        <p>Senior Creative Professional with 6+ years of experience in digital design, UX optimization, and project management. Specialized in conversion-focused web design, SEO-driven content strategy, and cross-functional creative problem-solving. Proven track record of improving site performance through data-driven design decisions and streamlined QA processes.</p>
+                        
+                        <p>Currently specializing in conversion-focused web design and UX optimization, combining analytical thinking with creative problem-solving to deliver measurable results. Personal practice explores minimalist aesthetics with strategic color application through illustration work.</p>
+                        
+                        <div class="education">
+                            <h3 class="section-subtitle">Education</h3>
+                            <p>Bachelor of Science in Public Health<br>
+                            University of the Philippines - Manila | 2014 - 2018</p>
+                        </div>
+                        
+                        <div class="languages">
+                            <h3 class="section-subtitle">Languages</h3>
+                            <p><strong>Native:</strong> English, Filipino<br>
+                            <strong>Intermediate:</strong> French</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="languages">
-                    <h3 class="section-subtitle">Languages</h3>
-                    <p><strong>Native:</strong> English, Filipino<br>
-                    <strong>Intermediate:</strong> French</p>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -711,19 +745,19 @@
                 
                 <div class="contact-info">
                     <div class="contact-item">
-                        <strong>Email:</strong> your.email@gmail.com
+                        <strong>Email:</strong> anna.sasil101@gmail.com
                     </div>
                     <div class="contact-item">
-                        <strong>Phone:</strong> +63 XXX XXX XXXX
+                        <strong>Phone:</strong> +63 9760046390
                     </div>
                     <div class="contact-item">
                         <strong>Location:</strong> Metro Manila, Philippines
                     </div>
                     <div class="contact-item">
-                        <strong>LinkedIn:</strong> <a href="#" target="_blank">your-profile</a>
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank">adzsasil</a>
                     </div>
                     
-                    <a href="#" target="_blank" class="resume-btn">Download Resume PDF</a>
+                    <a href="your-resume.pdf" target="_blank" class="resume-btn">Download Resume PDF</a>
                 </div>
             </div>
         </div>
