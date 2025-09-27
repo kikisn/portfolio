@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna Dominique Z. Sasil - QSL</title>
+    <title>Anna Dominique Z. Sasil</title>
     <style>
-        @import url('"https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap');
         
         * {
             margin: 0;
@@ -14,20 +14,21 @@
         }
         
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Jost', sans-serif;
             background: 
                 radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(160, 82, 45, 0.08) 0%, transparent 50%),
                 linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 100%);
-            /* Replace this with: background: url('your-paper-texture.jpg') center/cover; */
-            color: #2c1810;
+            /* Replace this with your paper texture: background: url('your-paper-texture.jpg') center/cover; */
+            color: #8C7F80;
             line-height: 1.4;
             min-height: 100vh;
-            border: 8px solid #cc2936;
+            border: 8px solid #d2312f;
             position: relative;
+            overflow-x: hidden;
         }
         
-        /* Vintage paper overlay effect */
+        /* Paper texture overlay */
         body::before {
             content: '';
             position: fixed;
@@ -40,221 +41,101 @@
                     0deg,
                     transparent,
                     transparent 2px,
-                    rgba(139, 69, 19, 0.03) 2px,
-                    rgba(139, 69, 19, 0.03) 4px
+                    rgba(139, 69, 19, 0.02) 2px,
+                    rgba(139, 69, 19, 0.02) 4px
                 );
             pointer-events: none;
             z-index: 1;
         }
         
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 100%;
+            height: calc(100vh - 16px);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
             position: relative;
             z-index: 2;
         }
         
-        /* Header - Radio Card Style */
+        /* Header */
         .header {
-            background: rgba(255, 255, 255, 0.9);
-            border: 3px solid #2c1810;
-            padding: 20px;
-            margin-bottom: 30px;
-            position: relative;
-            box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
-        }
-        
-        .header::before {
-            content: 'QSL - 73s';
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: #ffed4e;
-            padding: 5px 15px;
-            font-size: 12px;
-            font-weight: bold;
-            border: 2px solid #2c1810;
-            transform: rotate(-2deg);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        
-        .call-sign {
-            font-family: 'DM Sans', sans-serif;
-            font-size: clamp(24px, 4vw, 36px);
-            font-weight: bold;
-            color: #cc2936;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            /* Risograph effect */
-            text-shadow: 
-                3px 3px 0px #ff6b35,
-                6px 6px 0px #f7931e,
-                1px 1px 0px rgba(0,0,0,0.2);
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-item {
-            text-decoration: none;
-            color: #2c1810;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            padding: 8px 15px;
-            border: 2px solid #2c1810;
-            background: rgba(255, 255, 255, 0.7);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-item:hover {
-            background: #ffed4e;
-            transform: rotate(-1deg) translateY(-2px);
-            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-        }
-        
-        /* Main Content Cards */
-        .content-section {
-            margin-bottom: 40px;
-        }
-        
-        .qsl-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 4px solid #2c1810;
-            padding: 30px;
-            margin-bottom: 30px;
-            position: relative;
-            box-shadow: 8px 8px 0px rgba(0,0,0,0.15);
-            transform: rotate(0.5deg);
-        }
-        
-        .qsl-card:nth-child(even) {
-            transform: rotate(-0.3deg);
-        }
-        
-        .qsl-card::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            width: 30px;
-            height: 30px;
-            background: #cc2936;
-            border: 2px solid #2c1810;
-            transform: rotate(45deg);
-        }
-        
-        .section-header {
-            font-family: 'DM Sans', sans-serif;
-            font-size: clamp(18px, 3vw, 28px);
-            color: #cc2936;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            /* Risograph effect */
-            text-shadow: 
-                2px 2px 0px #0066cc,
-                4px 4px 0px #ffed4e,
-                1px 1px 0px rgba(0,0,0,0.3);
-        }
-        
-        /* Hero Section */
-        .hero-card {
-            background: #ffed4e;
-            border: 6px solid #cc2936;
-            padding: 40px;
             text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            transform: rotate(-0.5deg);
+            margin-bottom: 80px;
         }
         
-        .hero-title {
-            font-family: 'DM Sans', sans-serif;
-            font-size: clamp(28px, 5vw, 48px);
-            color: #2c1810;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            /* Strong risograph effect */
-            text-shadow: 
-                4px 4px 0px #cc2936,
-                8px 8px 0px #0066cc,
-                2px 2px 0px rgba(0,0,0,0.3);
-        }
-        
-        .hero-subtitle {
-            font-size: 16px;
-            color: #2c1810;
-            font-weight: bold;
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #d2312f;
             text-transform: uppercase;
             letter-spacing: 2px;
+            margin-bottom: 20px;
         }
         
-        .hero-description {
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 1.6;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
         
-        /* Work Grid - Radio Card Style */
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+        .nav-link {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: #d2312f;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s ease;
         }
         
-        .work-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 3px solid #2c1810;
-            padding: 20px;
+        .nav-link:hover {
+            opacity: 0.7;
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+        }
+        
+        /* Work Display - 3 items */
+        .work-display {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            max-width: 1000px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .work-item {
+            background: rgba(255, 255, 255, 0.9);
+            width: 280px;
+            height: 350px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             transition: transform 0.3s ease;
+            border: 1px solid rgba(210, 49, 47, 0.2);
         }
         
-        .work-card:hover {
-            transform: rotate(1deg) translateY(-5px);
-            box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
-        }
-        
-        .work-card::before {
-            content: 'QSL';
-            position: absolute;
-            top: -12px;
-            left: 15px;
-            background: #0066cc;
-            color: white;
-            padding: 4px 10px;
-            font-size: 10px;
-            font-weight: bold;
-            border: 2px solid #2c1810;
+        .work-item:hover {
+            transform: translateY(-10px);
         }
         
         .work-image {
             width: 100%;
-            height: 200px;
-            background: #f5f5f5;
-            border: 3px solid #2c1810;
+            height: 280px;
+            background: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
             position: relative;
             overflow: hidden;
         }
@@ -266,441 +147,603 @@
         }
         
         .work-placeholder {
-            color: #666;
+            font-family: 'Jost', sans-serif;
             font-size: 12px;
+            color: #8C7F80;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            padding: 20px;
+        }
+        
+        .work-info {
+            padding: 20px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .work-title {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 14px;
-            color: #cc2936;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: #d2312f;
+            margin-bottom: 4px;
+            text-transform: lowercase;
         }
         
         .work-type {
-            background: #ffed4e;
-            padding: 3px 8px;
-            font-size: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid #2c1810;
-            display: inline-block;
-            margin-bottom: 10px;
+            font-family: 'Jost', sans-serif;
+            font-size: 11px;
+            color: #8C7F80;
+            font-weight: 400;
         }
         
-        .work-description {
-            font-size: 12px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            color: #2c1810;
-        }
-        
-        .work-links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .work-link {
-            text-decoration: none;
-            background: #cc2936;
-            color: white;
-            padding: 5px 12px;
-            font-size: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 2px solid #2c1810;
-            transition: all 0.2s ease;
-        }
-        
-        .work-link:hover {
-            background: #ffed4e;
-            color: #2c1810;
-            transform: translateY(-2px);
-        }
-        
-        /* About Section - Telegraph Style */
-        .about-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 4px solid #2c1810;
-            padding: 30px;
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: start;
-        }
-        
-        .about-card::before {
-            content: 'OPERATOR INFO';
+        /* Navigation Arrows */
+        .slider-nav {
             position: absolute;
-            top: -15px;
-            left: 20px;
-            background: #0066cc;
-            color: white;
-            padding: 5px 15px;
-            font-size: 12px;
-            font-weight: bold;
-            border: 2px solid #2c1810;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: #d2312f;
+            cursor: pointer;
+            padding: 15px;
+            transition: opacity 0.3s ease;
+            z-index: 10;
         }
         
-        .about-text {
-            font-size: 13px;
-            line-height: 1.6;
+        .slider-nav:hover {
+            opacity: 0.7;
         }
         
-        .about-text p {
-            margin-bottom: 15px;
+        .slider-nav.prev {
+            left: -80px;
         }
         
-        .skills-section {
-            border-left: 4px solid #ffed4e;
-            padding-left: 20px;
+        .slider-nav.next {
+            right: -80px;
         }
         
-        .skills-title {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
-            color: #cc2936;
+        /* Sections */
+        .section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(160, 82, 45, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 100%);
+            border: 8px solid #d2312f;
+            padding: 60px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(139, 69, 19, 0.02) 2px,
+                    rgba(139, 69, 19, 0.02) 4px
+                );
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .section.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #d2312f;
             text-transform: uppercase;
-            margin-bottom: 15px;
             letter-spacing: 1px;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #d2312f;
+            cursor: pointer;
+            padding: 10px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            opacity: 0.7;
+        }
+        
+        .section-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Information Section */
+        .about-content {
+            max-width: 600px;
+            text-align: left;
+        }
+        
+        .about-content p {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #8C7F80;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        
+        .job-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #d2312f;
+            margin-bottom: 20px;
         }
         
         .skills-list {
-            display: grid;
-            gap: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
         }
         
         .skill-item {
-            background: rgba(255, 237, 78, 0.3);
-            border: 1px solid #2c1810;
-            padding: 8px 12px;
-            font-size: 11px;
-            font-weight: bold;
+            font-family: 'Jost', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: #8C7F80;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px 16px;
+            border: 1px solid rgba(210, 49, 47, 0.2);
+        }
+        
+        /* Contact Section - QSL Card Style */
+        .contact-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            max-width: 800px;
+        }
+        
+        .contact-illustration {
+            width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #d2312f;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .contact-illustration::before {
+            content: 'QSL CARD';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #d2312f;
+            color: white;
+            padding: 4px 12px;
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
-        /* Contact Card */
-        .contact-card {
-            background: #cc2936;
-            color: white;
-            border: 4px solid #2c1810;
-            padding: 30px;
-            text-align: center;
-            position: relative;
-            transform: rotate(0.3deg);
-        }
-        
-        .contact-card::before {
-            content: '73s & TNX';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ffed4e;
-            color: #2c1810;
-            padding: 5px 15px;
-            font-size: 12px;
-            font-weight: bold;
-            border: 2px solid #2c1810;
-        }
-        
-        .contact-title {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 20px;
-            text-transform: uppercase;
+        .illustration-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #f8f8f8;
+            border: 2px dashed #d2312f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+            color: #8C7F80;
+            font-family: 'Jost', sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .contact-details {
+            font-family: 'Jost', sans-serif;
+            font-size: 11px;
+            color: #8C7F80;
+            text-align: center;
+            line-height: 1.4;
+        }
+        
+        .contact-details div {
+            margin-bottom: 8px;
+        }
+        
+        .contact-tagline {
+            background: #d2312f;
+            color: white;
+            padding: 8px 16px;
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            text-align: center;
         }
         
         .contact-info {
-            display: grid;
-            gap: 10px;
-            max-width: 300px;
-            margin: 0 auto;
+            flex: 1;
         }
         
         .contact-item {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid white;
-            padding: 10px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #8C7F80;
+            margin-bottom: 20px;
+            display: block;
         }
         
         .contact-item a {
-            color: white;
+            color: #d2312f;
             text-decoration: none;
+            transition: opacity 0.3s ease;
         }
         
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .contact-item a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Work Section */
+        .work-content {
+            max-width: 700px;
+            text-align: left;
+        }
+        
+        .work-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #d2312f;
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+        
+        .work-content h3:first-of-type {
+            margin-top: 0;
+        }
+        
+        .work-content p {
+            font-family: 'Jost', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #8C7F80;
+            line-height: 1.7;
+            margin-bottom: 12px;
         }
         
         /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                border: 4px solid #cc2936;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-card {
-                grid-template-columns: 1fr;
+        @media (max-width: 1100px) {
+            .work-display {
                 gap: 20px;
             }
             
-            .call-sign {
+            .work-item {
+                width: 250px;
+                height: 320px;
+            }
+            
+            .work-image {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .work-display {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .slider-nav {
+                display: none;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+                gap: 40px;
                 text-align: center;
             }
         }
         
-        /* Stamp effects */
-        .stamp {
-            position: absolute;
-            background: #ffed4e;
-            border: 2px solid #cc2936;
-            padding: 5px 10px;
-            font-size: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transform: rotate(-15deg);
-        }
-        
-        .stamp-1 {
-            top: 20px;
-            right: 20px;
-        }
-        
-        .stamp-2 {
-            bottom: 20px;
-            left: 20px;
-            transform: rotate(10deg);
+        @media (max-width: 768px) {
+            body {
+                border: 4px solid #d2312f;
+            }
+            
+            .container {
+                height: calc(100vh - 8px);
+                padding: 30px;
+            }
+            
+            .name {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+            
+            .header-nav {
+                gap: 25px;
+                flex-wrap: wrap;
+            }
+            
+            .nav-link {
+                font-size: 14px;
+            }
+            
+            .section {
+                border: 4px solid #d2312f;
+                padding: 30px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+            
+            .contact-illustration {
+                width: 250px;
+                height: 320px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header QSL Card -->
     <div class="container">
+        <!-- Header -->
         <div class="header">
-            <div class="header-content">
-                <div class="call-sign">Anna-DZ-Sasil</div>
-                <nav class="nav-menu">
-                    <a href="#work" class="nav-item">Work</a>
-                    <a href="#about" class="nav-item">Operator</a>
-                    <a href="#contact" class="nav-item">QSL</a>
-                </nav>
-            </div>
+            <h1 class="name">Anna Dominique Z. Sasil</h1>
+            <nav class="header-nav">
+                <a href="#" class="nav-link" onclick="openSection('work')">Work</a>
+                <a href="#" class="nav-link" onclick="openSection('information')">Information</a>
+                <a href="#" class="nav-link" onclick="openSection('contact')">How to Reach Me</a>
+            </nav>
         </div>
 
-        <!-- Hero Card -->
-        <div class="hero-card">
-            <h1 class="hero-title">Creative Professional</h1>
-            <div class="hero-subtitle">UX/UI Analyst • Web Designer • Graphic Designer</div>
-            <p class="hero-description">
-                Specializing in conversion-focused design and user experience optimization. 
-                Broadcasting creative solutions from Metro Manila, Philippines.
-            </p>
-            <div class="stamp stamp-1">VERIFIED</div>
+        <!-- Main Content - Work Display (3 items) -->
+        <div class="main-content">
+            <div class="work-display">
+                <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
+                
+                <div class="work-item">
+                    <div class="work-image">
+                        <div class="work-placeholder">Clean Solutions USA<br>Website Redesign<br>Before/After</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-title">clean solutions usa</div>
+                        <div class="work-type">website redesign</div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-image">
+                        <div class="work-placeholder">Rebel House Utah<br>Fitness Studio<br>Rebrand</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-title">rebel house utah</div>
+                        <div class="work-type">fitness studio rebrand</div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-image">
+                        <div class="work-placeholder">Landing Page<br>Optimization<br>Daily Work</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-title">ppc optimization</div>
+                        <div class="work-type">daily landing page work</div>
+                    </div>
+                </div>
+                
+                <button class="slider-nav next" onclick="changeSlide(1)">›</button>
+            </div>
         </div>
+    </div>
 
-        <!-- Work Section -->
-        <section id="work" class="content-section">
-            <div class="qsl-card">
-                <h2 class="section-header">Transmission Log</h2>
+    <!-- Work Section -->
+    <div class="section" id="work-section">
+        <div class="section-header">
+            <h2 class="section-title">Work</h2>
+            <button class="close-btn" onclick="closeSection()">&times;</button>
+        </div>
+        <div class="section-content">
+            <div class="work-content">
+                <h3>Clean Solutions USA</h3>
+                <p>Complete website redesign for power washing and holiday lighting service. Improved user flow, clearer service categorization, and mobile-responsive design resulting in enhanced professional brand presentation.</p>
                 
-                <div class="work-grid">
-                    <div class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">Clean Solutions USA<br>Before/After Screens</div>
-                        </div>
-                        <div class="work-type">Website Redesign</div>
-                        <h3 class="work-title">Clean Solutions USA</h3>
-                        <p class="work-description">
-                            Complete redesign of power washing service site. Improved UX with 
-                            clearer service categories and mobile-responsive design.
-                        </p>
-                        <div class="work-links">
-                            <a href="https://cleansolutionsusa.mystagingwebsite.com/" target="_blank" class="work-link">Live</a>
-                            <a href="https://drive.google.com/file/d/11HoVNOJBPesYSWu_GN4ZdA5QyZCA2pxC/view" target="_blank" class="work-link">Before</a>
-                        </div>
-                    </div>
+                <h3>Rebel House Utah</h3>
+                <p>Boutique indoor cycling studio rebrand with modern, energetic design. Enhanced community messaging and streamlined class booking user experience for improved brand coherence and engagement.</p>
+                
+                <h3>PPC Optimization</h3>
+                <p>Daily optimization of 8+ landing pages for conversion rate improvement. Focus on SEO compliance, accessibility standards, and user experience best practices with 45-minute average turnaround time.</p>
+                
+                <h3>DOST Publications</h3>
+                <p>Established comprehensive visual identity system for Department of Science & Technology. Created infographics, technical reports, and publicity materials serving 50+ staff members across multiple research initiatives.</p>
+                
+                <h3>Personal Illustrations</h3>
+                <p>Postcard illustration series exploring "normcore + one splash of color" aesthetic. Hand-drawn works capturing movement and everyday moments with selective color application.</p>
+            </div>
+        </div>
+    </div>
 
-                    <div class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">Rebel House Utah<br>Fitness Studio Rebrand</div>
-                        </div>
-                        <div class="work-type">Website Redesign</div>
-                        <h3 class="work-title">Rebel House Utah</h3>
-                        <p class="work-description">
-                            Boutique cycling studio rebrand. Modern, energetic design with 
-                            enhanced community messaging and booking flow.
-                        </p>
-                        <div class="work-links">
-                            <a href="https://drive.google.com/file/d/187qz5WGz6S8TVT3OaZHuEptuSwvN4YDi/view" target="_blank" class="work-link">After</a>
-                            <a href="https://drive.google.com/file/d/1GMCvejmKwmKndYcjo7_R6YILQOQYmM-r/view" target="_blank" class="work-link">Before</a>
-                        </div>
-                    </div>
-
-                    <div class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">Landing Page<br>Optimization Examples</div>
-                        </div>
-                        <div class="work-type">UX Optimization</div>
-                        <h3 class="work-title">Daily PPC Optimization</h3>
-                        <p class="work-description">
-                            8+ landing pages daily for conversion improvement. Focus on 
-                            SEO, accessibility, and UX best practices.
-                        </p>
-                        <div class="work-links">
-                            <a href="#contact" class="work-link">Examples</a>
-                        </div>
-                    </div>
-
-                    <div class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">Government Publications<br>& Infographics</div>
-                        </div>
-                        <div class="work-type">Graphic Design</div>
-                        <h3 class="work-title">DOST Publications</h3>
-                        <p class="work-description">
-                            Visual identity system for Department of Science & Technology. 
-                            Infographics, reports, and publicity materials.
-                        </p>
-                        <div class="work-links">
-                            <a href="https://drive.google.com/file/d/1hN-YwnJaYkn9-LQpDEvgyNP6LtTj7qC3/view" target="_blank" class="work-link">Portfolio</a>
-                        </div>
-                    </div>
-
-                    <div class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">Postcard Illustration<br>Series</div>
-                        </div>
-                        <div class="work-type">Illustration</div>
-                        <h3 class="work-title">Personal Work</h3>
-                        <p class="work-description">
-                            "Normcore + one splash of color" aesthetic. Hand-drawn postcards 
-                            exploring movement and everyday moments.
-                        </p>
-                        <div class="work-links">
-                            <a href="#contact" class="work-link">Series</a>
-                        </div>
-                    </div>
-
-                    <div class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">Custom Web Elements<br>& Animations</div>
-                        </div>
-                        <div class="work-type">Web Dev</div>
-                        <h3 class="work-title">Custom Elements</h3>
-                        <p class="work-description">
-                            HTML/CSS graphics and animations for enhanced UX. Button effects, 
-                            interactive elements, and visual enhancements.
-                        </p>
-                        <div class="work-links">
-                            <a href="#contact" class="work-link">Examples</a>
-                        </div>
-                    </div>
+    <!-- Information Section -->
+    <div class="section" id="information-section">
+        <div class="section-header">
+            <h2 class="section-title">Information</h2>
+            <button class="close-btn" onclick="closeSection()">&times;</button>
+        </div>
+        <div class="section-content">
+            <div class="about-content">
+                <div class="job-title">Creative Professional, UX/UI Analyst</div>
+                
+                <p>6+ years experience bridging design and functionality. Background in public health taught systematic thinking about user needs, while design experience creates solutions that are both beautiful and effective.</p>
+                
+                <p>Currently at Olly Olly, LLC specializing in conversion-focused web design and UX optimization. Review and improve 8+ landing pages daily, combining analytical thinking with creative problem-solving to deliver measurable results.</p>
+                
+                <p>Personal practice explores minimalist aesthetics with strategic color application through postcard illustrations, maintaining focus on movement and authentic moment capture.</p>
+                
+                <div class="skills-list">
+                    <span class="skill-item">Adobe Photoshop</span>
+                    <span class="skill-item">Figma</span>
+                    <span class="skill-item">HTML/CSS</span>
+                    <span class="skill-item">WordPress</span>
+                    <span class="skill-item">UX/UI Analysis</span>
+                    <span class="skill-item">SEO Optimization</span>
+                    <span class="skill-item">Python Basics</span>
+                    <span class="skill-item">JIRA & Agile</span>
+                    <span class="skill-item">Google Analytics</span>
+                    <span class="skill-item">AI Tools Integration</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- About Section -->
-        <section id="about" class="content-section">
-            <div class="about-card">
-                <div class="about-text">
-                    <h2 class="section-header">Operator Info</h2>
-                    <p>6+ years experience bridging design and functionality. Background in public health 
-                    taught systematic thinking about user needs, while design experience creates solutions 
-                    that are both beautiful and effective.</p>
-                    
-                    <p>Currently at Olly Olly, LLC specializing in conversion-focused web design and 
-                    UX optimization. Review and improve 8+ landing pages daily, combining analytical 
-                    thinking with creative problem-solving.</p>
-                    
-                    <p>Personal work explores "normcore" simplicity with unexpected moments of color 
-                    and personality through postcard illustrations.</p>
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">How to Reach Me</h2>
+            <button class="close-btn" onclick="closeSection()">&times;</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        Your Illustration<br>Will Go Here<br>(PNG Upload)
+                    </div>
+                    <div class="contact-details">
+                        <div>EMAIL: your.email@gmail.com</div>
+                        <div>PHONE: +63 XXX XXX XXXX</div>
+                        <div>LOCATION: Metro Manila, PH</div>
+                        <div>LINKEDIN: your-profile</div>
+                    </div>
+                    <div class="contact-tagline">I'll Get Back to You ASAP</div>
                 </div>
                 
-                <div class="skills-section">
-                    <h3 class="skills-title">Equipment & Tools</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">Adobe Photoshop</div>
-                        <div class="skill-item">Figma Design</div>
-                        <div class="skill-item">HTML/CSS</div>
-                        <div class="skill-item">WordPress CMS</div>
-                        <div class="skill-item">UX/UI Analysis</div>
-                        <div class="skill-item">SEO Optimization</div>
-                        <div class="skill-item">Python Basics</div>
-                        <div class="skill-item">JIRA & Agile</div>
-                        <div class="skill-item">Google Analytics</div>
-                        <div class="skill-item">AI Tools</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        Available for freelance projects, consulting work, and full-time opportunities in web design, UX analysis, and creative strategy.
+                    </div>
+                    <div class="contact-item">
+                        <a href="mailto:your.email@gmail.com">Send me an email</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="#" target="_blank">View LinkedIn profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="#" target="_blank">Download resume PDF</a>
                     </div>
                 </div>
-                <div class="stamp stamp-2">QRV</div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <div class="contact-card">
-            <h2 class="contact-title">QSL Information</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <a href="mailto:your.email@gmail.com">your.email@gmail.com</a>
-                </div>
-                <div class="contact-item">+63 XXX XXX XXXX</div>
-                <div class="contact-item">Metro Manila, PH</div>
-                <div class="contact-item">
-                    <a href="#">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">Available for Projects</div>
             </div>
         </div>
     </div>
 
     <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+        // Work display cycling (shows 3 at a time, cycles through different sets)
+        const workProjects = [
+            [
+                { title: 'clean solutions usa', type: 'website redesign', placeholder: 'Clean Solutions USA<br>Website Redesign<br>Before/After' },
+                { title: 'rebel house utah', type: 'fitness studio rebrand', placeholder: 'Rebel House Utah<br>Fitness Studio<br>Rebrand' },
+                { title: 'ppc optimization', type: 'daily landing page work', placeholder: 'Landing Page<br>Optimization<br>Daily Work' }
+            ],
+            [
+                { title: 'dost publications', type: 'graphic design & infographics', placeholder: 'Government Publications<br>& Infographics<br>Visual Identity' },
+                { title: 'postcard series', type: 'personal illustrations', placeholder: 'Postcard Illustrations<br>Personal Work<br>Movement Studies' },
+                { title: 'web elements', type: 'html/css development', placeholder: 'Custom Web Elements<br>& Animations<br>Interactive Features' }
+            ]
+        ];
+        
+        let currentSet = 0;
+        
+        function updateWorkDisplay() {
+            const workItems = document.querySelectorAll('.work-item');
+            const currentProjects = workProjects[currentSet];
+            
+            workItems.forEach((item, index) => {
+                if (currentProjects[index]) {
+                    const placeholder = item.querySelector('.work-placeholder');
+                    const title = item.querySelector('.work-title');
+                    const type = item.querySelector('.work-type');
+                    
+                    placeholder.innerHTML = currentProjects[index].placeholder;
+                    title.textContent = currentProjects[index].title;
+                    type.textContent = currentProjects[index].type;
                 }
             });
+        }
+        
+        function changeSlide(direction) {
+            currentSet += direction;
+            if (currentSet >= workProjects.length) {
+                currentSet = 0;
+            }
+            if (currentSet < 0) {
+                currentSet = workProjects.length - 1;
+            }
+            updateWorkDisplay();
+        }
+        
+        function openSection(sectionName) {
+            const section = document.getElementById(sectionName + '-section');
+            section.classList.add('active');
+        }
+        
+        function closeSection() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+        }
+        
+        // Auto-cycle work sets every 12 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 12000);
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'Escape') closeSection();
         });
-
-        // Add some random rotation to cards on scroll
-        window.addEventListener('scroll', () => {
-            const cards = document.querySelectorAll('.work-card');
-            cards.forEach((card, index) => {
-                const rect = card.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const rotation = (window.scrollY / 100 + index) % 4 - 2;
-                    card.style.transform = `rotate(${rotation}deg) translateY(-5px)`;
-                }
-            });
-        });
+        
+        // Initialize
+        updateWorkDisplay();
     </script>
 </body>
 </html>
