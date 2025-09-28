@@ -948,33 +948,33 @@
             ]
         ];
         
-        let currentSet = 0;
+            let currentIndex = 0;
+        const totalItems = 5;
+        const itemsToShow = 3;
         
         function updateWorkDisplay() {
             const workItems = document.querySelectorAll('.work-item');
-            const currentProjects = workProjects[currentSet];
             
             workItems.forEach((item, index) => {
-                if (currentProjects[index]) {
-                    const placeholder = item.querySelector('.work-placeholder');
-                    const title = item.querySelector('.work-title');
-                    const type = item.querySelector('.work-type');
-                    
-                    placeholder.innerHTML = currentProjects[index].placeholder;
-                    title.textContent = currentProjects[index].title;
-                    type.textContent = currentProjects[index].type;
+                if (index >= currentIndex && index < currentIndex + itemsToShow) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
                 }
             });
         }
         
         function changeSlide(direction) {
-            currentSet += direction;
-            if (currentSet >= workProjects.length) {
-                currentSet = 0;
+            currentIndex += direction;
+            
+            // Wrap around logic
+            if (currentIndex > totalItems - itemsToShow) {
+                currentIndex = 0;
             }
-            if (currentSet < 0) {
-                currentSet = workProjects.length - 1;
+            if (currentIndex < 0) {
+                currentIndex = totalItems - itemsToShow;
             }
+            
             updateWorkDisplay();
         }
         
@@ -988,10 +988,10 @@
             sections.forEach(section => section.classList.remove('active'));
         }
         
-        // Auto-cycle work sets every 12 seconds
+        // Auto-cycle every 8 seconds
         setInterval(() => {
             changeSlide(1);
-        }, 12000);
+        }, 8000);
         
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
@@ -1002,7 +1002,7 @@
         
         // Initialize
         updateWorkDisplay();
-
+    
         function openLightbox(id, imgSrc, title, description, link) {
             document.getElementById('lightbox-img').src = imgSrc;
             document.getElementById('lightbox-title').textContent = title;
@@ -1017,11 +1017,11 @@
             
             document.getElementById('lightbox').style.display = 'flex';
         }
-
+    
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
         }
     </script>
-
+    
 </body>
 </html>
