@@ -373,11 +373,13 @@
         
         /* About Section */
         .about-content {
-            max-width: 900px;
             margin: 0 auto;
             display: flex;
             gap: 60px;
             align-items: flex-start;
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 20px;
         }
         
         .about-photo {
@@ -585,6 +587,95 @@
                 background: #d2312f;
                 border-radius: 3px;
             }
+
+            .about-content::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .about-content::-webkit-scrollbar-track {
+                background: rgba(210, 49, 47, 0.1);
+            }
+
+            .about-content::-webkit-scrollbar-thumb {
+                background: #d2312f;
+                border-radius: 3px;
+            }
+
+        /* Lightbox Styles */
+            .lightbox {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 1000;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .lightbox-content {
+                max-width: 90%;
+                max-height: 90%;
+                background: white;
+                padding: 30px;
+                position: relative;
+                display: flex;
+                gap: 30px;
+                align-items: flex-start;
+            }
+            
+            .lightbox-image {
+                max-width: 600px;
+                max-height: 500px;
+            }
+            
+            .lightbox-image img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            
+            .lightbox-info {
+                width: 300px;
+                font-family: 'Jost', sans-serif;
+            }
+            
+            .lightbox-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: #d2312f;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+            }
+            
+            .lightbox-description {
+                font-size: 14px;
+                color: #8C7F80;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+            
+            .lightbox-links a {
+                display: inline-block;
+                margin-right: 15px;
+                color: #d2312f;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            
+            .lightbox-close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                background: none;
+                border: none;
+                font-size: 30px;
+                color: #8C7F80;
+                cursor: pointer;
+            }
     </style>
 </head>
 <body>
@@ -607,9 +698,9 @@
             <div class="work-display">
                 <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
                 
-                <div class="work-item">
+                <div class="work-item" onclick="openLightbox('clean-solutions', 'clean-solutions.jpg', 'Clean Solutions USA', 'Complete website redesign for power washing and holiday lighting service. Improved user flow, clearer service categorization, and mobile-responsive design.', 'https://cleansolutionsusa.mystagingwebsite.com/', 'https://drive.google.com/file/d/11HoVNOJBPesYSWu_GN4ZdA5QyZCA2pxC/view')">
                     <div class="work-image">
-                        <div class="work-placeholder">Clean Solutions USA<br>Website Redesign<br>Before/After</div>
+                        <img src="clean-solutions.jpg" alt="Clean Solutions USA redesign">
                     </div>
                     <div class="work-info">
                         <div class="work-title">clean solutions usa</div>
@@ -617,9 +708,9 @@
                     </div>
                 </div>
                 
-                <div class="work-item">
+                <div class="work-item" onclick="openLightbox('rebel-house', 'rebel-house.jpg', 'Rebel House Utah', 'Boutique indoor cycling studio rebrand with modern, energetic design. Enhanced community messaging and streamlined class booking experience.', 'https://drive.google.com/file/d/187qz5WGz6S8TVT3OaZHuEptuSwvN4YDi/view', 'https://drive.google.com/file/d/1GMCvejmKwmKndYcjo7_R6YILQOQYmM-r/view')">
                     <div class="work-image">
-                        <div class="work-placeholder">Rebel House Utah<br>Fitness Studio<br>Rebrand</div>
+                        <img src="rebel-house.jpg" alt="Rebel House UTAH redesign">
                     </div>
                     <div class="work-info">
                         <div class="work-title">rebel house utah</div>
@@ -769,6 +860,19 @@
             </div>
         </div>
     </div>
+        <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <div class="lightbox-image">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-description" id="lightbox-desc"></p>
+                <div class="lightbox-links" id="lightbox-links"></div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Work display cycling
@@ -839,6 +943,25 @@
         
         // Initialize
         updateWorkDisplay();
+
+        function openLightbox(id, imgSrc, title, description, link1, link2) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-title').textContent = title;
+            document.getElementById('lightbox-desc').textContent = description;
+    
+                const linksContainer = document.getElementById('lightbox-links');
+                linksContainer.innerHTML = `
+                    <a href="${link1}" target="_blank">Live Site</a>
+                    ${link2 ? `<a href="${link2}" target="_blank">Before/After</a>` : ''}
+                `;
+    
+                document.getElementById('lightbox').style.display = 'flex';
+            }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
     </script>
+
 </body>
 </html>
