@@ -468,6 +468,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            align-items: flex-start;
         }
         
         .contact-item {
@@ -553,10 +554,13 @@
         @media (max-width: 768px) {
             body {
                 border: 4px solid #d2312f;
+                min-height: 100vh;
+                height: auto;
             }
             
             .container {
-                height: calc(100vh - 8px);
+                height: auto;
+                min-height: calc(100vh - 8px);
                 padding: 20px;
             }
             
@@ -573,8 +577,39 @@
                 font-size: 14px;
                 padding: 8px 15px;
             }
+
+            .about-content {
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .about-photo {
+                width: 200px;
+                height: 250px;
+                order: -1;
+            }
+            
+            .about-text {
+                order: 1;
+            }
+            
+            .education, .languages {
+                text-align: left;
+            }
+            .main-content {
+                padding: 20px 0;
+                min-height: auto;
+            }
+            
+            .work-display {
+                flex-direction: column;
+                gap: 30px;
+                height: auto;
+            }
         }
-        
+                
         /* Custom Scrollbar */
             .work-experience::-webkit-scrollbar {
                 width: 6px;
