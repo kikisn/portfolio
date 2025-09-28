@@ -698,7 +698,7 @@
             <div class="work-display">
                 <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
                 
-                <div class="work-item" onclick="openLightbox('clean-solutions', 'clean-solutions.jpg', 'Clean Solutions USA', 'Complete website redesign for power washing and holiday lighting service. Improved user flow, clearer service categorization, and mobile-responsive design.', 'https://cleansolutionsusa.mystagingwebsite.com/', 'https://drive.google.com/file/d/11HoVNOJBPesYSWu_GN4ZdA5QyZCA2pxC/view')">
+                <div class="work-item" onclick="openLightbox('clean-solutions', 'clean-solutions.jpg', 'Clean Solutions USA', 'Complete website redesign for power washing and holiday lighting service. Improved user flow, clearer service categorization, and mobile-responsive design.', 'https://drive.google.com/file/d/1QJs4nSSXQP0sPR0w4ZKqmsKWZkla7m51/view')">
                     <div class="work-image">
                         <img src="clean-solutions.jpg" alt="Clean Solutions USA redesign">
                     </div>
@@ -708,7 +708,7 @@
                     </div>
                 </div>
                 
-                <div class="work-item" onclick="openLightbox('rebel-house', 'rebel-house.jpg', 'Rebel House Utah', 'Boutique indoor cycling studio rebrand with modern, energetic design. Enhanced community messaging and streamlined class booking experience.', 'https://drive.google.com/file/d/187qz5WGz6S8TVT3OaZHuEptuSwvN4YDi/view', 'https://drive.google.com/file/d/1GMCvejmKwmKndYcjo7_R6YILQOQYmM-r/view')">
+                <div class="work-item" onclick="openLightbox('rebel-house', 'rebel-house.jpg', 'Rebel House Utah', 'Boutique indoor cycling studio rebrand with modern, energetic design. Enhanced community messaging and streamlined class booking experience.', 'https://drive.google.com/file/d/1uhccCJE9dLc60qSW5t3TjO1WdKu68USq/view')">
                     <div class="work-image">
                         <img src="rebel-house.jpg" alt="Rebel House UTAH redesign">
                     </div>
@@ -718,13 +718,43 @@
                     </div>
                 </div>
                 
-                <div class="work-item">
+                <div class="work-item" onclick="openLightbox('ppc-optimization', 'ppc-optimization.jpg', 'PPC Optimization', 'Optimizing PPC landing pages by aligning messaging with ad intent, simplifying design, speeding up load times, and using clear CTAs to boost conversions', 'https://drive.google.com/file/d/1dvaLS2cAa-XFGb_PPc3OZpLBmBjNLM8i/view')">
                     <div class="work-image">
-                        <div class="work-placeholder">Landing Page<br>Optimization<br>Daily Work</div>
+                        <img src="ppc-optimization.jpg" alt="PPC Optimization">
                     </div>
                     <div class="work-info">
                         <div class="work-title">ppc optimization</div>
                         <div class="work-type">daily landing page work</div>
+                    </div>
+                </div>
+
+                <div class="work-item" onclick="openLightbox('dost-publications', 'dost-publications.jpg', 'DOST Publications', 'Visual identity system for Department of Science & Technology. Created infographics, technical reports, and publicity materials serving 50+ staff members across multiple research initiatives.', 'https://drive.google.com/file/d/1hN-YwnJaYkn9-LQpDEvgyNP6LtTj7qC3/view')">
+                    <div class="work-image">
+                        <img src="dost-publications.jpg" alt="DOST Publications">
+                    </div>
+                    <div class="work-info">
+                        <div class="work-title">DOST Publications</div>
+                        <div class="work-type">graphic design & infographics</div>
+                    </div>
+                </div>
+
+                <div class="work-item" onclick="openLightbox('miscellaneous', 'miscellaneous.jpg', 'Postcard Illustrations', 'Personal illustration series exploring normcore + one splash of color aesthetic. Hand-drawn works capturing movement and everyday moments with selective color application.', '#')">
+                    <div class="work-image">
+                        <img src="miscellaneous.jpg" alt="Postcard Illustrations">
+                    </div>
+                    <div class="work-info">
+                        <div class="work-title">Miscellaneous</div>
+                        <div class="work-type">personal illustrations</div>
+                    </div>
+                </div>
+
+                <div class="work-item" onclick="openLightbox('web-elements', 'web-elements.gif', 'Custom Web Elements', 'Custom HTML/CSS graphics and animations for enhanced user experience. Button effects, interactive elements, and visual enhancements created for various client projects.', '#')">
+                    <div class="work-image">
+                        <img src="web-elements.gif" alt="Custom Web Elements">
+                    </div>
+                    <div class="work-info">
+                        <div class="work-title">web elements</div>
+                        <div class="work-type">html/css development</div>
                     </div>
                 </div>
                 
@@ -944,19 +974,20 @@
         // Initialize
         updateWorkDisplay();
 
-        function openLightbox(id, imgSrc, title, description, link1, link2) {
+        function openLightbox(id, imgSrc, title, description, link) {
             document.getElementById('lightbox-img').src = imgSrc;
             document.getElementById('lightbox-title').textContent = title;
             document.getElementById('lightbox-desc').textContent = description;
-    
-                const linksContainer = document.getElementById('lightbox-links');
-                linksContainer.innerHTML = `
-                    <a href="${link1}" target="_blank">Live Site</a>
-                    ${link2 ? `<a href="${link2}" target="_blank">Before/After</a>` : ''}
-                `;
-    
-                document.getElementById('lightbox').style.display = 'flex';
+            
+            const linksContainer = document.getElementById('lightbox-links');
+            if (link && link !== '#') {
+                linksContainer.innerHTML = `<a href="${link}" target="_blank">View Project</a>`;
+            } else {
+                linksContainer.innerHTML = '';
             }
+            
+            document.getElementById('lightbox').style.display = 'flex';
+        }
 
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
