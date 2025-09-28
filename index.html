@@ -75,8 +75,15 @@
             color: #d2312f;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+        }
         .header-nav {
             display: flex;
             gap: 40px;
@@ -588,7 +595,10 @@
     <div class="container">
         <!-- New Header Style -->
         <div class="header">
-            <div class="logo">Anna Sasil</div>
+            <div class="logo">
+                 <img src="favicon.png" alt="Anna Sasil logo" class="logo-icon">
+                Anna Sasil
+            </div>
             <nav class="header-nav">
                 <a href="#" class="nav-link" onclick="openSection('work')">Work</a>
                 <a href="#" class="nav-link" onclick="openSection('about')">About</a>
