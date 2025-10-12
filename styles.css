@@ -909,7 +909,7 @@ body::before {
     }
     
     .header-nav {
-        gap: 20px;
+        gap: 6px;
     }
 }
 
