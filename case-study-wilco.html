@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILCO Restoration LLC - Case Study | Anna Sasil</title>
+    <meta name="description" content="Website design for restoration and remodeling services company.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study-styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Before/After Slider Styles -->
+    <style>
+        .before-after-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .before-after-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .after-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .before-image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .before-image {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: left center;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        .slider-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 48px;
+            height: 48px;
+            background: #ff6b35;
+            border: 3px solid white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: ew-resize;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .slider-button:hover {
+            background: #e55a25;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .before-label,
+        .after-label {
+            position: absolute;
+            top: 20px;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 5;
+        }
+        
+        .before-label {
+            left: 20px;
+        }
+        
+        .after-label {
+            right: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .slider-button {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .slider-button svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .before-label,
+            .after-label {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="case-study-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="#" onclick="openSection('contact')" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="case-hero">
+        <div class="case-hero-content">
+            <div class="case-category">Web Design • UX/UI Enhancement</div>
+            <h1 class="case-title">WILCO Restoration LLC</h1>
+            <p class="case-subtitle">Website Design for Restoration & Remodeling Services</p>
+        </div>
+        <div class="case-hero-image">
+            <img src="wilco-restoration-new.webp" alt="WILCO Restoration LLC website">
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="case-section">
+        <div class="case-container">
+            <div class="case-overview">
+                <div class="overview-item">
+                    <h3>Role</h3>
+                    <p>UX/UI Enhancement, Web Design</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Timeline</h3>
+                    <p>1 hour</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Tools</h3>
+                    <p>Figma, HTML/CSS, Photoshop</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Link</h3>
+                    <p><a href="https://wilkorestoration.mystagingwebsite.com/" target="_blank" rel="noopener">View Project →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="case-section bg-light">
+        <div class="case-container">
+            <h2 class="section-title">The Challenge</h2>
+            <div class="content-block">
+                <p class="lead-text">The client wanted to modernize the website's appearance while maintaining brand consistency. Key goals included integrating visual elements from the logo, such as the wave pattern and fire-and-ice color scheme throughout the site, and incorporating a branded truck image into the design. The challenge was to achieve these updates using only CSS and HTML, without modifying the base theme's HTML structure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="case-section">
+        <div class="case-container">
+            <h2 class="section-title">The Solution</h2>
+            <div class="before-after-slider">
+                <div class="before-after-container">
+                    <img src="wilco-restoration-new.webp" alt="Wilco Restoration - After" class="after-image">
+                    <div class="before-image-wrapper">
+                        <img src="wilco-restoration-old.webp" alt="Wilco Restoration - Before" class="before-image">
+                    </div>
+                    <div class="slider-handle">
+                        <div class="slider-line"></div>
+                        <div class="slider-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 19L8 12L15 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 19L16 12L9 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="before-label">Before</div>
+                    <div class="after-label">After</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors Section -->
+    <section class="case-section bg-light">
+        <div class="case-container">
+            <h2 class="section-title">Colors</h2>
+            <div class="content-block">
+                <h3>Fire and Ice Color Scheme</h3>
+                <p>The color palette reflects the brand's fire and ice duality, representing both urgency and trust:</p>
+                
+                <h4 style="margin-top: 30px;">Primary Colors</h4>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #E94E1B; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(233, 78, 27, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Fire Orange</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#E94E1B</code></p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #0066CC; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Ice Blue</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#0066CC</code></p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 30px;">Secondary Colors</h4>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #FF6B35; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Light Fire Orange</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#FF6B35</code></p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #0080E8; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(0, 128, 232, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Bright Ice Blue</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#0080E8</code></p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #4DA6FF; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(77, 166, 255, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Light Ice Blue</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#4DA6FF</code></p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 30px;">Neutral Colors</h4>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #1A2332; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(26, 35, 50, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Neutral Dark</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#1A2332</code></p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #2C3E50; margin: 0 auto 10px; box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);"></div>
+                        <p style="font-size: 14px; margin: 5px 0;"><strong>Dark Gray</strong></p>
+                        <p style="font-size: 12px; color: #666;"><code>#2C3E50</code></p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 30px;">Color Usage</h4>
+                <ul>
+                    <li><strong>Fire colors (#E94E1B & #FF6B35):</strong> Buttons, CTAs, urgent/action elements</li>
+                    <li><strong>Ice colors (#0066CC, #0080E8, #4DA6FF):</strong> Links, hover states, trust/professional elements</li>
+                    <li><strong>Neutrals (#1A2332 & #2C3E50):</strong> Text, backgrounds, structure</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section class="case-section">
+        <div class="case-container">
+            <h2 class="section-title">Typography</h2>
+            <div class="content-block">
+                <p><strong>Fonts Used:</strong></p>
+                <ul>
+                    <li><strong>Raleway (Bold)</strong> for headings - More elegant and refined</li>
+                    <li><strong>Lato</strong> for body text - Similar to Open Sans but slightly warmer</li>
+                </ul>
+                
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin-top: 30px;">
+                    <h3 style="margin-top: 0;">Live Typography Preview</h3>
+                    <div style="margin: 20px 0; padding: 20px; background: white; border-radius: 4px;">
+                        <h1 style="font-family: 'Raleway', sans-serif; font-size: 48px; font-weight: 700; letter-spacing: 0.5px; margin: 0 0 10px 0; color: #1A2332;">Water and Fire Damage Recovery</h1>
+                        <p style="font-family: 'Lato', sans-serif; font-size: 16px; line-height: 1.6; color: #2C3E50; margin: 0;">Lato provides excellent readability for body text with a warm, approachable feel. It ensures users can easily consume information about restoration services, emergency response, and project details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="case-section bg-light">
+        <div class="case-container">
+            <h2 class="section-title">Website Showcase</h2>
+            <div class="content-block">
+                <!-- Desktop Video -->
+                <div style="margin: 30px 0;">
+                    <video autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <source src="wilco-restoration.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Mobile Video -->
+                <div style="margin: 30px 0; display: flex; justify-content: center;">
+                    <video autoplay loop muted playsinline style="width: 280px; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <source src="wilco-mobile.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Library Section -->
+    <section class="case-section bg-light">
+        <div class="case-container">
+            <h2 class="section-title">Component Library</h2>
+            <div class="content-block">
+                <p>Live rendering of key design components implemented in the website:</p>
+                
+                <!-- Modern Buttons Demo -->
+                <div style="background: #f8f9fa; padding: 40px; border-radius: 8px; margin: 30px 0;">
+                    <h3 style="margin-top: 0;">Modern Gradient Buttons with Fire-to-Ice Transition</h3>
+                    <p style="margin-bottom: 30px;">Hover over the buttons to see the fire-to-ice gradient effect:</p>
+                    
+                    <style>
+                        .demo-wilco-btn {
+                            background: linear-gradient(135deg, #f85621 0%, #f85621 100%);
+                            border: none;
+                            border-radius: 50px;
+                            padding: 14px 32px;
+                            color: white;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                            transition: all 0.3s ease;
+                            position: relative;
+                            overflow: hidden;
+                            box-shadow: 0 4px 15px rgba(233, 78, 27, 0.3);
+                            cursor: pointer;
+                            display: inline-block;
+                            text-decoration: none;
+                            margin: 10px;
+                        }
+
+                        .demo-wilco-btn::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(135deg, #006B7D 0%, #1E3A5F 100%);
+                            transition: left 0.4s ease;
+                            z-index: 0;
+                        }
+
+                        .demo-wilco-btn:hover::before {
+                            left: 0;
+                        }
+
+                        .demo-wilco-btn:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+                        }
+
+                        .demo-wilco-btn span {
+                            position: relative;
+                            z-index: 1;
+                        }
+                    </style>
+                    
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button class="demo-wilco-btn"><span>Get A Free Estimate</span></button>
+                        <button class="demo-wilco-btn"><span>Emergency Services 24/7</span></button>
+                    </div>
+                    
+                    <details style="margin-top: 30px;">
+                        <summary style="cursor: pointer; font-weight: 600; color: #d2312f; padding: 10px 0;">View CSS Code</summary>
+                        <pre style="background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 4px; overflow-x: auto; margin-top: 15px; font-size: 13px; line-height: 1.5;"><code>:root {
+  --fire-primary: #5C1818;
+  --fire-secondary: #D32F2F;
+  --ice-primary: #006B7D;
+  --ice-secondary: #1E3A5F;
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--fire-primary) 0%, var(--fire-secondary) 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 14px 32px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(233, 78, 27, 0.3);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--ice-primary) 0%, var(--ice-secondary) 100%);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+}</code></pre>
+                    </details>
+                </div>
+    </section>        
+
+    <!-- Next Project Navigation -->
+    <section class="case-navigation">
+        <div class="case-container">
+            <a href="case-study-vino-arsan.html" class="next-project">
+                <span class="next-label">Next Project</span>
+                <h3>Vino Arsan →</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="case-footer">
+        <div class="case-container">
+            <p>Want to discuss this project or work together?</p>
+            <a href="#" onclick="openSection('contact')" class="btn-primary">Get in Touch</a>
+            <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+    </footer>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        <img src="illustration.png" alt="Illustration by Anna Sasil">
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:anna.sasil101@gmail.com">anna.sasil101@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:+639760046390">+63 9760046390</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Metro Manila, Philippines
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank" rel="noopener noreferrer">adzsasil</a>
+                    </div>
+                    
+                    <a href="Anna Sasil - Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Download Resume PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    
+    <!-- Before/After Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.before-after-container');
+            if (!container) return;
+            
+            const slider = container.querySelector('.slider-handle');
+            const beforeWrapper = container.querySelector('.before-image-wrapper');
+            const beforeImage = container.querySelector('.before-image');
+            let isResizing = false;
+            
+            // Set before image width to match container
+            function updateBeforeImageWidth() {
+                const containerWidth = container.offsetWidth;
+                beforeImage.style.width = containerWidth + 'px';
+            }
+            
+            updateBeforeImageWidth();
+            window.addEventListener('resize', updateBeforeImageWidth);
+            
+            // Handle mouse down
+            slider.addEventListener('mousedown', startResize);
+            
+            // Handle mouse move
+            document.addEventListener('mousemove', function(e) {
+                if (!isResizing) return;
+                resize(e.clientX);
+            });
+            
+            // Handle mouse up
+            document.addEventListener('mouseup', stopResize);
+            
+            // Handle touch start
+            slider.addEventListener('touchstart', function(e) {
+                isResizing = true;
+                e.preventDefault();
+            });
+            
+            // Handle touch move
+            document.addEventListener('touchmove', function(e) {
+                if (!isResizing) return;
+                const touch = e.touches[0];
+                resize(touch.clientX);
+                e.preventDefault();
+            });
+            
+            // Handle touch end
+            document.addEventListener('touchend', stopResize);
+            
+            function startResize(e) {
+                isResizing = true;
+                e.preventDefault();
+            }
+            
+            function stopResize() {
+                isResizing = false;
+            }
+            
+            function resize(clientX) {
+                const containerRect = container.getBoundingClientRect();
+                const containerLeft = containerRect.left;
+                const containerWidth = containerRect.width;
+                
+                // Calculate position
+                let position = clientX - containerLeft;
+                
+                // Constrain between 0 and container width
+                position = Math.max(0, Math.min(position, containerWidth));
+                
+                // Calculate percentage
+                const percentage = (position / containerWidth) * 100;
+                
+                // Update slider position
+                slider.style.left = percentage + '%';
+                beforeWrapper.style.width = percentage + '%';
+            }
+        });
+    </script>
+</body>
+</html>
+

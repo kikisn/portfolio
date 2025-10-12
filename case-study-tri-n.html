@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-N School and Office Supplies - Case Study | Anna Sasil</title>
+    <meta name="description" content="Website design for school and office supplies business.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study-styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="case-study-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="#" onclick="openSection('contact')" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <style>
+        .modern-hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 40px 60px;
+        }
+        
+        .modern-hero-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .modern-hero h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 40px 0;
+            max-width: 900px;
+        }
+        
+        .modern-project-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .modern-info-item h3 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin: 0 0 10px 0;
+        }
+        
+        .modern-info-item p {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .modern-overview {
+            margin: 60px 0;
+        }
+        
+        .modern-overview h2 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin: 0 0 20px 0;
+        }
+        
+        .modern-overview p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+        }
+        
+        .modern-hero-image {
+            width: 100%;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .modern-hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .modern-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+        
+        .modern-section-small {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .modern-section h2 {
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 30px 0;
+            max-width: 700px;
+        }
+        
+        .modern-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        
+        .modern-section-image {
+            width: 100%;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        
+        .modern-section-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .placeholder-img {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .modern-bg-light {
+            background: #fafafa;
+        }
+        
+        @media (max-width: 768px) {
+            .modern-hero {
+                padding: 60px 20px 40px;
+            }
+            
+            .modern-hero h1 {
+                font-size: 40px;
+            }
+            
+            .modern-project-info {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .modern-section {
+                padding: 60px 20px;
+            }
+            
+            .modern-section h2 {
+                font-size: 32px;
+            }
+            
+            .placeholder-img {
+                height: 400px;
+            }
+        }
+    </style>
+    
+    <section class="modern-hero">
+        <div class="modern-hero-title">TRI-N SCHOOL AND OFFICE SUPPLIES</div>
+        <h1>E-commerce platform for school and office supplies serving retail and institutional clients</h1>
+        
+        <div class="modern-project-info">
+            <div class="modern-info-item">
+                <h3>Industry</h3>
+                <p>E-commerce & Retail</p>
+            </div>
+            <div class="modern-info-item">
+                <h3>My Role</h3>
+                <p>UX/UI Designer, E-commerce Design, Information Architecture</p>
+            </div>
+            <div class="modern-info-item">
+                <h3>Timeline</h3>
+                <p>2-3 weeks</p>
+            </div>
+            <div class="modern-info-item">
+                <h3>Team</h3>
+                <p>1 designer, 2 developers, 1 product manager</p>
+            </div>
+        </div>
+        
+        <div class="modern-overview">
+            <h2>Overview</h2>
+            <p>Tri-N School and Office Supplies needed an e-commerce website to expand their business online and serve both retail and institutional clients. The challenge was to create an intuitive platform for a diverse product catalog, catering to both individual buyers and bulk orders while organizing a large inventory effectively with easy-to-use search, filtering, and a smooth checkout process.</p>
+        </div>
+        
+        <div class="modern-hero-image">
+            <div class="placeholder-img">Tri-N E-commerce Platform Hero Image</div>
+        </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="modern-section">
+        <div class="modern-section-small">Introduction</div>
+        <h2>E-commerce challenge for dual market segments</h2>
+        <p>The business needed to transition from physical retail to online sales while serving two distinct customer segments with different needs: individual consumers making small purchases and institutional buyers requiring bulk orders with specific procurement workflows.</p>
+        <p>Key challenges included managing diverse product categories from pens to furniture, accommodating different purchasing behaviors and needs, creating efficient inventory browsing for thousands of SKUs, and implementing flexible checkout for both small and bulk orders.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">User Segments & Business Analysis</div>
+        </div>
+    </section>
+
+    <!-- Research & Discovery -->
+    <section class="modern-section modern-bg-light">
+        <div class="modern-section-small">Process</div>
+        <h2>Understanding buyer behavior & needs</h2>
+        <p>Conducted research with both retail customers and institutional procurement officers to understand their shopping patterns, pain points, and decision-making processes. Analyzed competitor e-commerce platforms and identified opportunities for differentiation.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">User Research & Journey Mapping</div>
+        </div>
+        
+        <p><strong>Key Insights:</strong> Retail customers prioritize quick product discovery and checkout, institutional buyers need bulk pricing and order management features, search and filtering are critical for large inventories, and mobile optimization is essential for on-the-go ordering.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Information Architecture & Site Structure</div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="modern-section">
+        <div class="modern-section-small">Solution</div>
+        <h2>Dual-mode e-commerce design</h2>
+        <p>Designed a flexible e-commerce platform with two distinct shopping modes: retail mode for individual buyers with streamlined browsing and quick checkout, and institutional mode featuring bulk pricing, quote requests, and account management. The system adapts based on customer type while maintaining consistent brand experience.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Product Catalog & Navigation System</div>
+        </div>
+        
+        <p>Implemented advanced filtering by category, price, brand, and specifications, smart search with autocomplete and suggestions, quick add-to-cart functionality, and comparison tools for evaluating multiple products.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Search & Filter Interface</div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="modern-section modern-bg-light">
+        <div class="modern-section-small">Implementation</div>
+        <h2>Checkout & order management</h2>
+        <p>Created streamlined checkout flow accommodating both retail and bulk purchases. For institutional buyers, added features like saved carts, purchase order integration, approval workflows, and invoice management. Retail customers benefit from guest checkout, saved addresses, and multiple payment options.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Checkout Flow & Payment Interface</div>
+        </div>
+        
+        <p>Mobile-responsive design ensures seamless browsing and purchasing across devices. Quick reorder functionality, order tracking, and customer account management features enhance the post-purchase experience.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Mobile Experience & Account Dashboard</div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="modern-section">
+        <div class="modern-section-small">Design Impact</div>
+        <h2>Business growth & user satisfaction</h2>
+        
+        <div style="background: #f8f8f8; padding: 60px 40px; border-radius: 12px; margin: 40px 0;">
+            <p style="font-size: 20px; line-height: 1.8; color: #333; margin: 0;">
+                - Successfully launched e-commerce platform serving both retail and institutional customer segments<br><br>
+                - Efficient product discovery through advanced search and filtering reduces time to purchase<br><br>
+                - Dual-mode shopping experience accommodates different buyer needs without compromising usability<br><br>
+                - Mobile-optimized design enables convenient on-the-go ordering and reordering
+            </p>
+        </div>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Final Platform Showcase & Features</div>
+        </div>
+    </section>
+
+    <!-- Next Project Navigation -->
+    <section class="modern-section" style="text-align: center; padding: 120px 40px;">
+        <h3 style="font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 30px;">Thank you for exploring this project!</h3>
+        <h2 style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin: 0 0 40px 0;">Ready for more?</h2>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="index.html#projects" style="padding: 16px 40px; background: #1a1a1a; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s;">Explore More</a>
+            <a href="#" onclick="openSection('contact')" style="padding: 16px 40px; border: 2px solid #1a1a1a; color: #1a1a1a; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s;">Let's Collaborate</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #fafafa; padding: 40px; text-align: center; border-top: 1px solid #e0e0e0;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <p style="color: #666; font-size: 14px;">
+                <a href="index.html" style="color: #1a1a1a; text-decoration: none; margin: 0 15px;">Home</a>
+                <a href="index.html#projects" style="color: #1a1a1a; text-decoration: none; margin: 0 15px;">Projects</a>
+                <a href="#" onclick="openSection('contact')" style="color: #1a1a1a; text-decoration: none; margin: 0 15px;">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        <img src="illustration.png" alt="Illustration by Anna Sasil">
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:anna.sasil101@gmail.com">anna.sasil101@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:+639760046390">+63 9760046390</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Metro Manila, Philippines
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank" rel="noopener noreferrer">adzsasil</a>
+                    </div>
+                    
+                    <a href="Anna Sasil - Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Download Resume PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
