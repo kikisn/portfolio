@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Sasil - Portfolio</title>
+    <meta name="description" content="Anna Sasil - Digital Designer specializing in e-commerce, landing page optimization, and conversion-focused web design.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Header & Navigation -->
+        <div class="header">
+            <div class="logo">
+                <img src="favicon.png" alt="Anna Sasil logo" class="logo-icon">
+                Anna Sasil
+            </div>
+            <nav class="header-nav">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#" class="nav-link" onclick="openSection('work')">Experience</a>
+                <a href="#" class="nav-link" onclick="openSection('about')">About</a>
+                <a href="#" class="nav-link contact" onclick="openSection('contact')">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">UX/UI Designer</h1>
+            <p class="hero-subtitle">Crafting conversion-focused digital experiences through user-centered design, data-driven optimization, and strategic problem-solving.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#" onclick="openSection('contact')" class="btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+
+        <!-- Main Content - Work Display Grid -->
+        <div class="main-content" id="projects">
+            <h2 class="section-heading">Featured Work</h2>
+            <div class="work-display">
+                
+                <!-- Work Item 1 - Clean Solutions USA -->
+                <div class="work-item featured" data-category="web-design">
+                    <a href="case-study-clean-solutions.html" class="work-link">
+                        <div class="work-image">
+                            <img src="clean-solutions.jpg" alt="Clean Solutions USA website redesign">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Case Study →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">UX/UI Enhancement</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Web Design</span>
+                            </div>
+                            <div class="work-title">Clean Solutions USA</div>
+                            <div class="work-type">Website Redesign</div>
+                            <div class="work-metrics">Improved user flow & service categorization</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Work Item 2 - M. G. Welding & Fences -->
+                <div class="work-item featured" data-category="web-design">
+                    <a href="case-study-ppc.html" class="work-link">
+                        <div class="work-image">
+                            <img src="mg-welding-home.webp" alt="M. G. Welding & Fences website">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Case Study →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">UI/UX Enhancement</span>
+                                <span class="tag">Web Design</span>
+                            </div>
+                            <div class="work-title">M. G. Welding & Fences</div>
+                            <div class="work-type">Website Design</div>
+                            <div class="work-metrics">Professional welding & fencing services</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Work Item 3 - WILCO Restoration LLC -->
+                <div class="work-item featured" data-category="web-design">
+                    <a href="case-study-wilco.html" class="work-link">
+                        <div class="work-image">
+                            <img src="wilco-restoration-home.webp" alt="WILCO Restoration LLC website">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Case Study →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">UI/UX Enhancement</span>
+                                <span class="tag">Web Design</span>
+                            </div>
+                            <div class="work-title">WILCO Restoration LLC</div>
+                            <div class="work-type">Website Design</div>
+                            <div class="work-metrics">Restoration & remodeling services</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Work Item 4 - Rebel House Utah
+                <div class="work-item featured" data-category="branding">
+                    <a href="case-study-rebel-house.html" class="work-link">
+                        <div class="work-image">
+                            <img src="rebel-house.jpg" alt="Rebel House Utah fitness studio rebrand">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Case Study →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">UX/UI Enhancement</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Web Design</span>
+                            </div>
+                            <div class="work-title">Rebel House Utah</div>
+                            <div class="work-type">Fitness Studio Rebrand</div>
+                            <div class="work-metrics">Modern, energetic brand identity</div>
+                        </div>
+                    </a>
+                </div>-->
+
+                <!-- Work Item 5 - Vino Arsan
+                <div class="work-item featured" data-category="web-design">
+                    <a href="case-study-vino-arsan.html" class="work-link">
+                        <div class="work-image">
+                            <img src="clean-solutions.jpg" alt="Vino Arsan wine business website">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Case Study →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">UX Design</span>
+                                <span class="tag">E-Commerce</span>
+                            </div>
+                            <div class="work-title">Vino Arsan</div>
+                            <div class="work-type">Wine Business Website</div>
+                            <div class="work-metrics">Elegant, sophisticated design</div>
+                        </div>
+                    </a>
+                </div>-->
+
+                <!-- Work Item 6 - Tri-N School and Office Supplies 
+                <div class="work-item featured" data-category="web-design">
+                    <a href="case-study-tri-n.html" class="work-link">
+                        <div class="work-image">
+                            <img src="dost-publications.jpg" alt="Tri-N School and Office Supplies website">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Case Study →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">UX Design</span>
+                                <span class="tag">E-Commerce</span>
+                            </div>
+                            <div class="work-title">Tri-N School and Office Supplies</div>
+                            <div class="work-type">E-Commerce Website</div>
+                            <div class="work-metrics">School & office supply business</div>
+                        </div>
+                    </a>
+                </div>-->
+
+                <!-- Work Item 7 - DOST Publications (Facebook Ads) -->
+                <div class="work-item" data-category="ads">
+                    <a href="facebook-ads.html" class="work-link">
+                        <div class="work-image">
+                            <img src="dost-publications.jpg" alt="DOST Publications and Facebook Ads">
+                            <div class="work-overlay">
+                                <span class="view-case-study">View Campaigns →</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Graphic Design</span>
+                            </div>
+                            <div class="work-title">Facebook Ad Campaigns</div>
+                            <div class="work-type">Social Media & Publicity</div>
+                            <div class="work-metrics">DOST publications & ad campaigns</div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Section - Professional Experience -->
+    <div class="section" id="work-section">
+        <div class="section-header">
+            <h2 class="section-title">Work</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="work-experience">
+                
+                <!-- Job 1: Olly Olly -->
+                <div class="job-section">
+                    <h3 class="job-title">Senior Quality Analyst</h3>
+                    <div class="job-company">Olly Olly, LLC | 2023 - Present</div>
+                    <p class="job-description">
+                        Lead conversion optimization and UX improvements for high-volume landing pages and websites across diverse client industries. 
+                        Optimize 15+ pages weekly through data-driven design decisions, strategic copywriting, and user-centered improvements. 
+                        Focus on improving conversion rates while maintaining brand consistency and fast load times.
+                    </p>
+                    <div class="achievements">
+                        <h4>Key Achievements & Approach</h4>
+                        <div class="achievement-item"><strong>Conversion Optimization:</strong> Redesign underperforming pages by improving visual hierarchy, clarifying value propositions, and optimizing CTAs</div>
+                        <div class="achievement-item"><strong>Efficiency:</strong> Reduced project turnaround from 90 to 45 minutes through systematic UX review process</div>
+                        <div class="achievement-item"><strong>Quality Focus:</strong> Maintain 100% client satisfaction through comprehensive testing and attention to detail</div>
+                        <div class="achievement-item"><strong>Tools & Methods:</strong> Figma for design, Photoshop for image optimization, HTML/CSS for custom implementations, ChatGPT for conversion copywriting</div>
+                        <div class="achievement-item"><strong>Mobile-First:</strong> Ensure responsive design and optimal mobile experience for 60-70% mobile traffic</div>
+                    </div>
+                </div>
+
+                <!-- Job 2: DOST -->
+                <div class="job-section">
+                    <h3 class="job-title">Project Development Officer / Graphic Designer</h3>
+                    <div class="job-company">Department of Science & Technology | 2019 - 2023</div>
+                    <p class="job-description">
+                        Built and managed the visual identity system for a government department serving 50+ staff members. 
+                        Created comprehensive design solutions including infographics, reports, publicity materials, and video content for scientific research initiatives. 
+                        Developed scalable design processes and templates to maintain consistency across multiple projects and departments.
+                    </p>
+                    <div class="achievements">
+                        <h4>Key Achievements & Approach</h4>
+                        <div class="achievement-item"><strong>Visual Identity Development:</strong> Established cohesive brand guidelines and templates for government communications</div>
+                        <div class="achievement-item"><strong>Information Design:</strong> Transformed complex scientific data into accessible, engaging infographics and publications</div>
+                        <div class="achievement-item"><strong>Systems Thinking:</strong> Created repeatable design processes and asset libraries serving 50+ team members</div>
+                        <div class="achievement-item"><strong>Stakeholder Management:</strong> Collaborated with multiple agencies, researchers, and leadership on diverse design needs</div>
+                        <div class="achievement-item"><strong>Tools:</strong> Adobe Creative Suite (Illustrator, Photoshop, InDesign), video editing software</div>
+                    </div>
+                </div>
+
+                <!-- Job 3: Planetary Health -->
+                <div class="job-section">
+                    <h3 class="job-title">Research Assistant / Content Creator</h3>
+                    <div class="job-company">Planetary Health Philippines | 2018 - 2019</div>
+                    <p class="job-description">
+                        Supported content strategy and visual communications for health-focused research startup. 
+                        Created website graphics, promotional materials, and written content to communicate research initiatives to diverse audiences. 
+                        Balanced creative work with project management responsibilities across multi-city research operations.
+                    </p>
+                    <div class="achievements">
+                        <h4>Key Contributions</h4>
+                        <div class="achievement-item"><strong>Content Development:</strong> Wrote blog posts, research proposals, and communications materials</div>
+                        <div class="achievement-item"><strong>Design Work:</strong> Created website graphics and promotional materials for research initiatives</div>
+                        <div class="achievement-item"><strong>Project Coordination:</strong> Managed logistics for complex multi-city research projects</div>
+                        <div class="achievement-item"><strong>Stakeholder Communication:</strong> Translated technical research into accessible content for various audiences</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section" id="about-section">
+        <div class="section-header">
+            <h2 class="section-title">About</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="about-content">
+                <!-- Profile Photo -->
+                <div class="about-photo">
+                    <img src="nikki.png" alt="Anna Sasil">
+                </div>
+                
+                <!-- About Text -->
+                <div class="about-text">
+                    <h2 class="section-title">Anna Sasil</h2>
+                    <p><strong>UX/UI Designer specializing in conversion-focused design and user experience optimization.</strong></p>
+                    
+                    <p>With 6+ years of experience, I bridge the gap between user needs and business goals through data-driven design decisions. My approach combines analytical thinking with creative problem-solving to create digital experiences that are both beautiful and effective.</p>
+                    
+                    <p>I specialize in landing page optimization, website redesigns, and brand identity development—always with a focus on improving user experience and driving measurable results.</p>
+
+                    <!-- Skills -->
+                    <div class="education">
+                        <h3 class="section-subtitle">Core Skills</h3>
+                        <p><strong>Design:</strong> Figma, Adobe Creative Suite (Photoshop, Illustrator), Wireframing, Prototyping<br>
+                        <strong>Development:</strong> HTML, CSS, Responsive Design<br>
+                        <strong>UX:</strong> User Research, A/B Testing, Conversion Optimization, Information Architecture<br>
+                        <strong>Tools:</strong> ChatGPT for copywriting, Git, Analytics platforms</p>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="education">
+                        <h3 class="section-subtitle">Education</h3>
+                        <p>Bachelor of Science in Public Health<br>
+                        University of the Philippines - Manila | 2014 - 2018</p>
+                    </div>
+                    
+                    <!-- Languages -->
+                    <div class="languages">
+                        <h3 class="section-subtitle">Languages</h3>
+                        <p><strong>Native:</strong> English, Filipino<br>
+                        <strong>Intermediate:</strong> French</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Let's Work Together</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <!-- Illustration -->
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        <img src="illustration.png" alt="Illustration by Anna Sasil">
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <p class="contact-intro">I'm currently available for UX/UI design opportunities and freelance projects. Whether you need help with conversion optimization, website redesigns, or brand development, I'd love to hear from you.</p>
+                    
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:anna.sasil101@gmail.com">anna.sasil101@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:+639760046390">+63 9760046390</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Metro Manila, Philippines
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank" rel="noopener noreferrer">linkedin.com/in/adzsasil</a>
+                    </div>
+                    
+                    <a href="Anna Sasil - Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Download Resume PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox - Project Detail View -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">×</button>
+            <div class="lightbox-image">
+                <img id="lightbox-img" src="" alt="Project preview">
+            </div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-description" id="lightbox-desc"></p>
+                <div class="lightbox-links" id="lightbox-links"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
