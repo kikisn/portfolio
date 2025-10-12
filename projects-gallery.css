@@ -1,0 +1,390 @@
+/* ============================================
+   PROJECTS GALLERY PAGE STYLES
+   ============================================ */
+
+/* Gallery Hero */
+.gallery-hero {
+    background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 100%);
+    padding: 100px 40px 80px;
+    text-align: center;
+    border-bottom: 1px solid rgba(210, 49, 47, 0.15);
+}
+
+.gallery-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-hero h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #d2312f;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.gallery-hero p {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #8C7F80;
+    line-height: 1.6;
+}
+
+/* Filter Section */
+.filter-section {
+    padding: 40px 40px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(210, 49, 47, 0.1);
+    position: sticky;
+    top: 61px;
+    z-index: 90;
+    backdrop-filter: blur(10px);
+}
+
+.filter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8C7F80;
+    background: transparent;
+    border: 1px solid rgba(210, 49, 47, 0.3);
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+    background: rgba(210, 49, 47, 0.1);
+    color: #d2312f;
+    border-color: #d2312f;
+}
+
+.filter-btn.active {
+    background: #d2312f;
+    color: white;
+    border-color: #d2312f;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 40px 80px;
+    min-height: 50vh;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* Project Items */
+.project-item {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+
+.project-item.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    position: absolute;
+    pointer-events: none;
+}
+
+.project-link {
+    display: block;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(210, 49, 47, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+.project-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(210, 49, 47, 0.2);
+    border-color: rgba(210, 49, 47, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    background: #f8f8f8;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-link:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(210, 49, 47, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-link:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay span {
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-category {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #d2312f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.project-info h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #d2312f;
+    margin: 0 0 8px 0;
+}
+
+.project-info p {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: #8C7F80;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Placeholder Projects */
+.placeholder-project .placeholder-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(210, 49, 47, 0.05) 0%, rgba(210, 49, 47, 0.1) 100%);
+    border: 2px dashed rgba(210, 49, 47, 0.2);
+    gap: 10px;
+}
+
+.placeholder-img span {
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #d2312f;
+}
+
+.placeholder-img small {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    color: #8C7F80;
+}
+
+/* Quick View Modal */
+.quick-view-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-view-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    max-width: 900px;
+    max-height: 90vh;
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #8C7F80;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #d2312f;
+}
+
+.modal-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-info h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #d2312f;
+    margin: 0;
+}
+
+.modal-info p {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: #8C7F80;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-state h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #d2312f;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: #8C7F80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-hero {
+        padding: 60px 20px 40px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 36px;
+    }
+
+    .gallery-hero p {
+        font-size: 16px;
+    }
+
+    .filter-section {
+        padding: 30px 20px 15px;
+        top: 0;
+        position: relative;
+    }
+
+    .filter-container {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .projects-section {
+        padding: 40px 20px 60px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .modal-content {
+        flex-direction: column;
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    .modal-image {
+        max-width: 100%;
+    }
+}
+
+
+
