@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vino Arsan - Case Study | Anna Sasil</title>
+    <meta name="description" content="Website design for wine business and vineyard.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study-styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="case-study-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="#" onclick="openSection('contact')" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <style>
+        .modern-hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 40px 60px;
+        }
+        
+        .modern-hero-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .modern-hero h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 40px 0;
+            max-width: 900px;
+        }
+        
+        .modern-project-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .modern-info-item h3 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin: 0 0 10px 0;
+        }
+        
+        .modern-info-item p {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .modern-overview {
+            margin: 60px 0;
+        }
+        
+        .modern-overview h2 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin: 0 0 20px 0;
+        }
+        
+        .modern-overview p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+        }
+        
+        .modern-hero-image {
+            width: 100%;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .modern-hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .modern-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+        
+        .modern-section-small {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .modern-section h2 {
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 30px 0;
+            max-width: 700px;
+        }
+        
+        .modern-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        
+        .modern-section-image {
+            width: 100%;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        
+        .modern-section-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .placeholder-img {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .modern-bg-light {
+            background: #fafafa;
+        }
+        
+        @media (max-width: 768px) {
+            .modern-hero {
+                padding: 60px 20px 40px;
+            }
+            
+            .modern-hero h1 {
+                font-size: 40px;
+            }
+            
+            .modern-project-info {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .modern-section {
+                padding: 60px 20px;
+            }
+            
+            .modern-section h2 {
+                font-size: 32px;
+            }
+            
+            .placeholder-img {
+                height: 400px;
+            }
+        }
+    </style>
+    
+    <section class="modern-hero">
+        <div class="modern-hero-title">VINO ARSAN</div>
+        <h1>Sophisticated website design for wine business and vineyard experience</h1>
+        
+        <div class="modern-project-info">
+            <div class="modern-info-item">
+                <h3>Industry</h3>
+                <p>Wine & Hospitality</p>
+            </div>
+            <div class="modern-info-item">
+                <h3>My Role</h3>
+                <p>Web Designer, UX/UI Designer, Branding</p>
+            </div>
+            <div class="modern-info-item">
+                <h3>Timeline</h3>
+                <p>3-4 weeks</p>
+            </div>
+            <div class="modern-info-item">
+                <h3>Team</h3>
+                <p>1 designer, 1 developer, 1 content strategist</p>
+            </div>
+        </div>
+        
+        <div class="modern-overview">
+            <h2>Overview</h2>
+            <p>Vino Arsan needed a sophisticated website to showcase their wine collection and vineyard experience. The challenge was to create an elegant, sophisticated online presence that reflects the premium nature of the brand while showcasing the wine collection with detailed product pages and providing information about vineyard tours and tastings with an intuitive online ordering system.</p>
+        </div>
+        
+        <div class="modern-hero-image">
+            <div class="placeholder-img">Vino Arsan Website Hero Image</div>
+        </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="modern-section">
+        <div class="modern-section-small">Introduction</div>
+        <h2>Defining the design challenge</h2>
+        <p>The wine business needed a digital presence that would match the sophistication and elegance of their products. The existing online presence didn't capture the premium experience customers would have at the vineyard or reflect the quality of their wine collection.</p>
+        <p>Key challenges included creating an intuitive navigation for diverse wine collections, implementing an engaging visual storytelling approach, balancing aesthetic elegance with functional e-commerce needs, and ensuring the site appeals to both wine enthusiasts and casual buyers.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Challenge & Brand Analysis</div>
+        </div>
+    </section>
+
+    <!-- Research & Discovery -->
+    <section class="modern-section modern-bg-light">
+        <div class="modern-section-small">Process</div>
+        <h2>Research & user insights</h2>
+        <p>Research included analyzing competitor wine websites, understanding customer journey from discovery to purchase, identifying key decision-making factors for wine buyers, and studying successful luxury e-commerce experiences.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">User Research & Competitor Analysis</div>
+        </div>
+        
+        <p><strong>Key Insights:</strong> Wine buyers value detailed product information, visual appeal drives purchase decisions, storytelling enhances brand connection, and seamless mobile experience is essential for modern consumers.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Customer Journey Mapping</div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="modern-section">
+        <div class="modern-section-small">Solution</div>
+        <h2>Visual design & brand experience</h2>
+        <p>Developed an elegant color palette featuring deep wine reds, warm golds, and clean whites that evoke sophistication. Typography choices blend classic serif fonts for elegance with modern sans-serifs for readability. The visual system incorporates high-quality photography, subtle animations, and intuitive navigation patterns.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Design System & Visual Identity</div>
+        </div>
+        
+        <p>Created immersive product pages with detailed tasting notes, pairing suggestions, and vineyard story integration. Implemented filtering system by region, grape variety, and price point for easy discovery.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Product Pages & Wine Catalog</div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="modern-section modern-bg-light">
+        <div class="modern-section-small">Implementation</div>
+        <h2>Website features & functionality</h2>
+        <p>The final website seamlessly integrates e-commerce functionality with brand storytelling. Features include interactive wine collection explorer, virtual vineyard tours, event booking system for tastings and tours, and personalized wine recommendations based on user preferences.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Homepage & Navigation Design</div>
+        </div>
+        
+        <p>Mobile-optimized experience ensures customers can browse and purchase wines on any device with streamlined checkout process and responsive design that maintains elegance across all screen sizes.</p>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Mobile Experience & E-commerce Flow</div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="modern-section">
+        <div class="modern-section-small">Design Impact</div>
+        <h2>Results & business outcomes</h2>
+        
+        <div style="background: #f8f8f8; padding: 60px 40px; border-radius: 12px; margin: 40px 0;">
+            <p style="font-size: 20px; line-height: 1.8; color: #333; margin: 0;">
+                - Successfully launched sophisticated e-commerce platform that reflects premium brand positioning<br><br>
+                - Enhanced user experience with intuitive product discovery and seamless purchasing flow<br><br>
+                - Integrated storytelling elements that educate customers and build emotional connection to the brand<br><br>
+                - Created cohesive digital experience that bridges online browsing with in-person vineyard visits
+            </p>
+        </div>
+        
+        <div class="modern-section-image">
+            <div class="placeholder-img">Final Design Showcase & Brand Applications</div>
+        </div>
+    </section>
+
+    <!-- Next Project Navigation -->
+    <section class="modern-section" style="text-align: center; padding: 120px 40px;">
+        <h3 style="font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 30px;">Thank you for exploring this project!</h3>
+        <h2 style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin: 0 0 40px 0;">Ready for more?</h2>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="index.html#projects" style="padding: 16px 40px; background: #1a1a1a; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s;">Explore More</a>
+            <a href="#" onclick="openSection('contact')" style="padding: 16px 40px; border: 2px solid #1a1a1a; color: #1a1a1a; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s;">Let's Collaborate</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #fafafa; padding: 40px; text-align: center; border-top: 1px solid #e0e0e0;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <p style="color: #666; font-size: 14px;">
+                <a href="index.html" style="color: #1a1a1a; text-decoration: none; margin: 0 15px;">Home</a>
+                <a href="index.html#projects" style="color: #1a1a1a; text-decoration: none; margin: 0 15px;">Projects</a>
+                <a href="#" onclick="openSection('contact')" style="color: #1a1a1a; text-decoration: none; margin: 0 15px;">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        <img src="illustration.png" alt="Illustration by Anna Sasil">
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:anna.sasil101@gmail.com">anna.sasil101@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:+639760046390">+63 9760046390</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Metro Manila, Philippines
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank" rel="noopener noreferrer">adzsasil</a>
+                    </div>
+                    
+                    <a href="Anna Sasil - Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Download Resume PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+    <!-- Footer -->
+    <footer class="case-footer">
+        <div class="footer-content">
+            <p class="footer-text">This website portfolio was designed and made by <a href="mailto:anna.sasil101@gmail.com">Anna Sasil</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+

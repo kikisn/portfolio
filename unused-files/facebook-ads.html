@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ad Campaigns - Anna Sasil</title>
+    <meta name="description" content="Facebook advertising campaigns and social media design work including DOST government publications and publicity materials.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study-styles.css">
+    <link rel="stylesheet" href="projects-gallery.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="case-study-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="#" onclick="openSection('contact')" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-content">
+            <h1>Facebook Ad Campaigns & Social Media Design</h1>
+            <p>Publicity materials, social media campaigns, and advertising work for government and private sector clients</p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="projects-container">
+            
+            <!-- DOST Publications Project -->
+            <div class="project-item" data-category="graphic-design">
+                <div class="project-link" onclick="openQuickView(this)" 
+                     data-title="DOST Publications & Publicity Materials"
+                     data-desc="Visual identity system for Department of Science & Technology. Created infographics, technical reports, publicity materials, and social media content serving 50+ staff members across multiple research initiatives. Developed comprehensive design system for government communications."
+                     data-img="dost-publications.jpg"
+                     data-link="https://drive.google.com/file/d/1PDhqKGUDjfao54yg_h8R8AQ3VjZARpEr/view">
+                    <div class="project-image">
+                        <img src="dost-publications.jpg" alt="DOST Publications">
+                        <div class="project-overlay">
+                            <span>View Details →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Government • Graphic Design</span>
+                        <h3>DOST Publications</h3>
+                        <p>Infographics, reports & publicity materials</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLACEHOLDER for additional Facebook Ad Campaigns -->
+            <!-- Anna: Add your Facebook ads here following the same format -->
+            
+            <div class="project-item" data-category="ads">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Facebook Ad Campaign 1</span>
+                            <small>Add your ad creative here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Campaign →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Social Media Advertising</span>
+                        <h3>Campaign Title</h3>
+                        <p>Brief description of the campaign</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ads">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Facebook Ad Campaign 2</span>
+                            <small>Add your ad creative here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Campaign →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Social Media Advertising</span>
+                        <h3>Campaign Title</h3>
+                        <p>Brief description of the campaign</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ads">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Facebook Ad Campaign 3</span>
+                            <small>Add your ad creative here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Campaign →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Social Media Advertising</span>
+                        <h3>Campaign Title</h3>
+                        <p>Brief description of the campaign</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ads">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Social Media Design 4</span>
+                            <small>Add your ad creative here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Campaign →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Social Media Advertising</span>
+                        <h3>Campaign Title</h3>
+                        <p>Brief description of the campaign</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="modal-overlay" onclick="closeQuickView()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeQuickView()">×</button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <a id="modalLink" href="#" target="_blank" class="btn-primary">View Full Project</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer CTA -->
+    <footer class="case-footer">
+        <div class="case-container">
+            <p>Interested in advertising or social media design?</p>
+            <a href="#" onclick="openSection('contact')" class="btn-primary">Let's Work Together</a>
+            <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+    </footer>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        <img src="illustration.png" alt="Illustration by Anna Sasil">
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:anna.sasil101@gmail.com">anna.sasil101@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:+639760046390">+63 9760046390</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Metro Manila, Philippines
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank" rel="noopener noreferrer">adzsasil</a>
+                    </div>
+                    
+                    <a href="Anna Sasil - Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Download Resume PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="case-footer">
+        <div class="footer-content">
+            <p class="footer-text">This website portfolio was designed and made by <a href="mailto:anna.sasil101@gmail.com">Anna Sasil</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="projects-gallery.js"></script>
+</body>
+</html>
+

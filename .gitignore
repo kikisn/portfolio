@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Large PSD files (optional - uncomment if you don't want to track)
+# *.psd
+
+# Unused files folder (optional - uncomment if you don't want to track)
+# unused-files/

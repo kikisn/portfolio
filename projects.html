@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Anna Sasil</title>
+    <meta name="description" content="Browse all design projects including landing pages, branding work, and digital campaigns by Anna Sasil.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study-styles.css">
+    <link rel="stylesheet" href="projects-gallery.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="case-study-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" onclick="openSection('about')" class="nav-link">About</a>
+                <a href="#" onclick="openSection('contact')" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-content">
+            <h1>All Projects</h1>
+            <p>A collection of landing pages, design work, and digital campaigns across various industries</p>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="landing-pages">Landing Pages</button>
+            <button class="filter-btn" data-filter="web-design">Web Design</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="ads">Ads & Campaigns</button>
+            <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="projects-container">
+            
+            <!-- PLACEHOLDER PROJECTS - Replace with actual project details -->
+            <!-- Anna will need to add her actual landing page images and details -->
+            
+            <!-- Featured Case Studies (repeated from homepage) -->
+            <div class="project-item" data-category="web-design">
+                <a href="case-study-clean-solutions.html" class="project-link">
+                    <div class="project-image">
+                        <img src="clean-solutions.jpg" alt="Clean Solutions USA">
+                        <div class="project-overlay">
+                            <span>View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Web Design • Case Study</span>
+                        <h3>Clean Solutions USA</h3>
+                        <p>Website redesign for power washing service</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-item" data-category="branding">
+                <a href="case-study-rebel-house.html" class="project-link">
+                    <div class="project-image">
+                        <img src="rebel-house.jpg" alt="Rebel House Utah">
+                        <div class="project-overlay">
+                            <span>View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Branding • Case Study</span>
+                        <h3>Rebel House Utah</h3>
+                        <p>Boutique fitness studio rebrand</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-item" data-category="landing-pages">
+                <a href="case-study-ppc.html" class="project-link">
+                    <div class="project-image">
+                        <img src="ppc-optimization.jpg" alt="PPC Landing Pages">
+                        <div class="project-overlay">
+                            <span>View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Landing Pages • Case Study</span>
+                        <h3>PPC Optimization Work</h3>
+                        <p>15+ pages optimized weekly</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-item" data-category="graphic-design">
+                <div class="project-link" onclick="openQuickView(this)" 
+                     data-title="DOST Publications"
+                     data-desc="Visual identity system for Department of Science & Technology. Created infographics, technical reports, and publicity materials serving 50+ staff members."
+                     data-img="dost-publications.jpg"
+                     data-link="https://drive.google.com/file/d/1PDhqKGUDjfao54yg_h8R8AQ3VjZARpEr/view">
+                    <div class="project-image">
+                        <img src="dost-publications.jpg" alt="DOST Publications">
+                        <div class="project-overlay">
+                            <span>View Details →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Graphic Design</span>
+                        <h3>DOST Publications</h3>
+                        <p>Government infographics & publications</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEMPLATE PLACEHOLDERS for Anna's 15+ Landing Pages -->
+            <!-- Anna should duplicate these and add her actual images/details -->
+            
+            <div class="project-item" data-category="landing-pages">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Landing Page Example 1</span>
+                            <small>Add your screenshot here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Landing Page</span>
+                        <h3>Project Title</h3>
+                        <p>Brief description of the project</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="landing-pages">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Landing Page Example 2</span>
+                            <small>Add your screenshot here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Landing Page</span>
+                        <h3>Project Title</h3>
+                        <p>Brief description of the project</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="landing-pages">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Landing Page Example 3</span>
+                            <small>Add your screenshot here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Landing Page</span>
+                        <h3>Project Title</h3>
+                        <p>Brief description of the project</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ads">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Facebook Ad Campaign 1</span>
+                            <small>Add your ad creative here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Campaign →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Advertising</span>
+                        <h3>Campaign Title</h3>
+                        <p>Facebook/social media ad campaign</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ads">
+                <div class="project-link placeholder-project">
+                    <div class="project-image">
+                        <div class="placeholder-img">
+                            <span>Facebook Ad Campaign 2</span>
+                            <small>Add your ad creative here</small>
+                        </div>
+                        <div class="project-overlay">
+                            <span>View Campaign →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Advertising</span>
+                        <h3>Campaign Title</h3>
+                        <p>Facebook/social media ad campaign</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more placeholder items as needed -->
+            <!-- Instructions for Anna: 
+                1. Take screenshots of your landing pages
+                2. Replace placeholder-img divs with actual images
+                3. Update titles and descriptions
+                4. Set appropriate data-category values
+                5. Remove "placeholder-project" class
+                6. Optionally add onclick="openQuickView(this)" with data attributes
+            -->
+
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="modal-overlay" onclick="closeQuickView()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeQuickView()">×</button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <a id="modalLink" href="#" target="_blank" class="btn-primary">View Full Project</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer CTA -->
+    <footer class="case-footer">
+        <div class="case-container">
+            <p>Like what you see?</p>
+            <a href="#" onclick="openSection('contact')" class="btn-primary">Let's Work Together</a>
+            <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+    </footer>
+
+    <!-- Sections from main portfolio -->
+    <div class="section" id="about-section">
+        <div class="section-header">
+            <h2 class="section-title">About</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="about-content">
+                <div class="about-photo">
+                    <img src="nikki.png" alt="Anna Sasil">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Anna Sasil</h2>
+                    <p>Senior Creative Professional with 6+ years of experience in digital design, UX optimization, and project management. Specialized in conversion-focused web design, SEO-driven content strategy, and cross-functional creative problem-solving. Proven track record of improving site performance through data-driven design decisions and streamlined QA processes.</p>
+                    <p>Currently specializing in conversion-focused web design and UX optimization, combining analytical thinking with creative problem-solving to deliver measurable results. Personal practice explores minimalist aesthetics with strategic color application through illustration work.</p>
+                    <div class="education">
+                        <h3 class="section-subtitle">Education</h3>
+                        <p>Bachelor of Science in Public Health<br>
+                        University of the Philippines - Manila | 2014 - 2018</p>
+                    </div>
+                    <div class="languages">
+                        <h3 class="section-subtitle">Languages</h3>
+                        <p><strong>Native:</strong> English, Filipino<br>
+                        <strong>Intermediate:</strong> French</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <button class="close-btn" onclick="closeSection()" aria-label="Close">×</button>
+        </div>
+        <div class="section-content">
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="illustration-placeholder">
+                        <img src="illustration.png" alt="Illustration by Anna Sasil">
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:anna.sasil101@gmail.com">anna.sasil101@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:+639760046390">+63 9760046390</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Metro Manila, Philippines
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adzsasil/" target="_blank" rel="noopener noreferrer">adzsasil</a>
+                    </div>
+                    <a href="Anna Sasil - Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Download Resume PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">This website portfolio was designed and made by <a href="mailto:anna.sasil101@gmail.com">Anna Sasil</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="projects-gallery.js"></script>
+</body>
+</html>
+
+
+
